@@ -11,9 +11,30 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
     <title>Portfolio</title>
+    <script>
+        function getData(){
+            var xtthp= new XMLHttpRequest();
+            xtthp.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+                    console.log(this.responseText);
+                    data=JSON.parse(this.responseText);
+                    setData(data);
+                }
+            }
+            xtthp.open("GET","https://api.github.com/users/Yujan3333",true);
+            xtthp.send();
+        }
+        function setData(data){
+            document.getElementById("githubName").innerText=data["name"];
+            document.getElementById("bio").innerText=data["bio"];
+            document.getElementById("followers").innerText=data["followers"];
+            document.getElementById("following").innerText=data["following"];
+            document.getElementById("location").innerText=data["location"];
+        }
+    </script>
 </head>
 
-<body>
+<body onload="getData();">
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ec360d;">
         <a class="navbar-brand" href="#">My Portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -30,7 +51,12 @@
         </div>
     </nav>
     <div>
-        <center><h1>Hello this is ME of Github</h1></center>
+        <center>
+            <h1>Github Information</h1>
+            <h2><img src="https://avatars.githubusercontent.com/u/72644568?v=4" id="image" class="rounded-circle" alt="My profile pic" height="130px" width="130px/> <br><span id="githubName"></span></h2>
+            <h3>My Bio is <span id="bio"></span></h3>
+            <h4>My followers are <span id="followers"></span>. I am following <span id="following"></span> people. <br>I live in <span id="location"></span></h4>
+        </center>
     </div>
 
 
