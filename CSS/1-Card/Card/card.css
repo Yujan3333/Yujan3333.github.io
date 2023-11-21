@@ -1,0 +1,103 @@
+.container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Main div */
+.main {
+  padding: 20px 24px 26px 25px;
+  background-color: rgb(214, 212, 212);
+  width: 370px;
+  height: 400px;
+  border-radius: 26px;
+  background: var(--white, #fff);
+  box-shadow: 0px 1.85185px 3.14815px 0px;
+}
+
+/* Main Image */
+.hero-img {
+  /* margin: 20px 24px 26px 25px; */
+  width: 370px;
+  height: 191px;
+}
+
+/* Header after the image */
+.header {
+  color: var(--black, #080809);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 124.5%; /* 22.41px */
+  letter-spacing: 0.27px;
+}
+
+/* Description after title */
+.content {
+  color: var(--text-2, #84829a);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 124.5%; /* 19.92px */
+  letter-spacing: -0.08px;
+}
+
+/* Each icon main div */
+.btn {
+  margin-top: 20px;
+  display: flex;
+  /* padding:10px; */
+}
+
+.btn-leaf {
+  background-color: rgb(224, 220, 220);
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.btn-map {
+  background-color: rgb(224, 220, 220);
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.btn-send {
+  background-color: rgb(224, 220, 220);
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.end {
+  display: flex;
+}
+
+.btn-building {
+  margin-top: 15px;
+}
+
+.end > p {
+  margin-left: 8px;
+  color: var(--text-2, #84829a);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 124.5%; /* 19.92px */
+  letter-spacing: -0.32px;
+}
