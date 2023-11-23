@@ -1,0 +1,22 @@
+.btn {
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    // default button
+    padding: 16px 32px;
+
+    // small button (nav)
+    &.small {
+        padding: 12px 24px;
+        line-height: 20px;
+    }
+
+    //transparent btn (hero)
+    &-transparent {
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: rgba(0, 0, 0, 0);
+    }
+}

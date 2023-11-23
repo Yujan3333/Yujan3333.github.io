@@ -1,0 +1,17 @@
+.header {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    &-logo {
+        margin: 0;
+    }
+    &-nav {
+        display: flex;
+        list-style-type: none;
+        gap: 32px;
+        
+        &-item {
+            color: $white;
+        }
+    }
+}
