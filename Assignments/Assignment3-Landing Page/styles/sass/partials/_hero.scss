@@ -1,0 +1,59 @@
+.hero {
+    display: flex;
+    // justify-content: space-between;
+    background: $primary-color;
+    padding: 80px 120px;
+    // height: 50rem;
+    color: $white;
+
+    // left hero div
+    &__left {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        gap: 2rem;
+    }
+    // right hero div
+    &__right {
+        margin-left: 50px;
+    }
+
+    // hero left div main title
+    &__title {
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 70px; /* 125% */
+        letter-spacing: -1.12px;
+        width: 80%;
+    }
+
+    // hero left div main desc
+    &__info {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 80%;
+    }
+
+    // Hero left div button section
+    &__action {
+        display: flex;
+        gap: 2rem;
+    }
+
+    // Hero left div bottom section
+    &__stat {
+        display: flex;
+        gap: 1rem;
+        &--title {
+            display: flex;
+            gap: 2rem;
+            h1 {
+                color: $white;
+                font-size: 32px;
+            }
+        }
+    }
+}

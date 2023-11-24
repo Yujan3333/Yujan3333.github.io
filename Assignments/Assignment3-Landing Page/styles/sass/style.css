@@ -23,7 +23,23 @@ button {
 }
 
 .container {
-  padding: 40px 80px;
+  padding: 0 24px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 36px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+.bg-gradient {
+  background: linear-gradient(45deg, #1B13A6 49.59%, #443CDF 88.57%), #FFF;
 }
 
 .btn {
@@ -37,14 +53,16 @@ button {
   padding: 12px 24px;
   line-height: 20px;
 }
-.btn-transparent {
+.btn.hero {
+  padding: 24px 32px;
+}
+.btn__transparent {
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(0, 0, 0, 0);
 }
 
 .header {
-  background-color: #5d55ff;
   display: flex;
   justify-content: space-between;
 }
@@ -53,6 +71,7 @@ button {
 }
 .header-nav {
   display: flex;
+  flex-basis: baseline;
   list-style-type: none;
   gap: 32px;
 }
@@ -60,31 +79,67 @@ button {
   color: #ffffff;
 }
 
-.hero-section {
+.hero {
   display: flex;
-  justify-content: space-between;
-  background-color: #5d55ff;
-  height: 50rem;
+  background: linear-gradient(45deg, #1B13A6 49.59%, #443CDF 88.57%), #FFF;
+  padding: 80px 120px;
+  color: #ffffff;
 }
-.hero-section-div {
+.hero__left {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  flex-basis: 40%;
+  flex-basis: 50%;
   gap: 2rem;
-  color: white;
 }
-.hero-section-div .hero-section-detail {
+.hero__right {
+  margin-left: 50px;
+}
+.hero__title {
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px; /* 125% */
+  letter-spacing: -1.12px;
+  width: 80%;
+}
+.hero__info {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 80%;
+}
+.hero__action {
+  display: flex;
+  gap: 2rem;
+}
+.hero__stat {
   display: flex;
   gap: 1rem;
 }
-.hero-section-div .hero-section-detail h2, .hero-section-div .hero-section-detail p {
-  margin: 0;
+.hero__stat--title {
+  display: flex;
+  gap: 2rem;
 }
-.hero-section-div .hero-section-detail h2 {
-  white-space: nowrap;
+.hero__stat--title h1 {
+  color: #ffffff;
+  font-size: 32px;
 }
 
-.hero-section-btn {
-  display: inline-block;
+.banner__company {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #443CDF;
+  padding: 4px 2px;
+}
+
+.company__logo {
+  width: 100px;
+  margin: 0 10px;
+}
+.company__logo img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

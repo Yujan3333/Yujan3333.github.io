@@ -1,5 +1,5 @@
 .header {
-    background-color: $primary-color;
+    // background-color: $primary-color;
     display: flex;
     justify-content: space-between;
     &-logo {
@@ -7,6 +7,7 @@
     }
     &-nav {
         display: flex;
+        flex-basis: baseline;
         list-style-type: none;
         gap: 32px;
         

@@ -13,8 +13,14 @@
         line-height: 20px;
     }
 
+    //hero button
+    &.hero{
+        padding: 24px 32px;
+
+    }
+
     //transparent btn (hero)
-    &-transparent {
+    &__transparent {
         border-radius: 8px;
         border: 1px solid rgba(255, 255, 255, 0.2);
         background-color: rgba(0, 0, 0, 0);

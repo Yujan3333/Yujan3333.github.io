@@ -1,0 +1,21 @@
+// Main div class
+.banner__company{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #443CDF;
+    padding: 4px 2px; 
+}
+
+// For each individual figure > img
+.company__logo{
+    width: 100px;
+    margin: 0 10px;
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+}
+
+

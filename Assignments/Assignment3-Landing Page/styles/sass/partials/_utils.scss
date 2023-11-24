@@ -1,4 +1,19 @@
 .container{
-    padding: 40px 80px;
-}
+    // padding: 40px 80px;
+    padding: 0 24px;
+    @media screen and (min-width: 768px) {
+      padding: 0 36px;
+    }
+    @media screen and (min-width: 1440px) {
+      padding: 0;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  }
 
+// background color for purple 
+.bg-gradient{
+  // background: linear-gradient(45deg, #1B13A6 49.59%, #443CDF 88.57%), #FFF;
+  background: $primary-color;
+}
+  
