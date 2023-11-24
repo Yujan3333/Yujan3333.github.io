@@ -2,7 +2,7 @@
     display: flex;
     // justify-content: space-between;
     // background: $primary-color;
-    background: linear-gradient(65deg, #362FCC 31.84%, #5D55FF 68.16%), var(--white);
+    background: linear-gradient(65deg, #362fcc 31.84%, #5d55ff 68.16%), var(--white);
     // height: 50rem;
     padding: 5rem 0 5rem 0;
     color: $white;
@@ -55,6 +55,40 @@
                 color: $white;
                 font-size: 32px;
             }
+        }
+    }
+
+    //small screen
+    @media screen and (max-width: 575px) {
+        flex-direction: column;
+        text-align: center;
+        &__title {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 38px;
+        }
+        &__info {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    //medium screen
+    @media screen and (max-width: 768px) {
+        &__title {
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 38px;
+        }
+        &__info {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
         }
     }
 }

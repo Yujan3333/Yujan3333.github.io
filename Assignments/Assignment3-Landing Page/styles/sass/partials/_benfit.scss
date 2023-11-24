@@ -13,5 +13,9 @@
     &__wrapper {
         display: flex;
         gap: 1rem;
+        //media queries
+        @media screen and (max-width: 575px) {
+            flex-direction: column;
+        }
     }
 }
