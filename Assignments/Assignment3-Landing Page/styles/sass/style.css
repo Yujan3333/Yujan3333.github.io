@@ -31,11 +31,16 @@ button {
 }
 
 .container {
-  padding: 0 24px;
+  padding: 0 80px;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (max-width: 575) {
   .container {
-    padding: 0 36px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 40px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -74,9 +79,11 @@ button {
 
 .header {
   background: linear-gradient(65deg, #362FCC 31.84%, #5D55FF 68.16%), var(--white);
-  position: relative;
+  position: sticky;
   display: flex;
   justify-content: space-between;
+  font-size: 16px;
+  line-height: normal;
 }
 .header__logo {
   margin: 0;
@@ -94,11 +101,31 @@ button {
   font-size: 16px;
   line-height: normal;
 }
+.header__toggle {
+  display: none;
+}
 
+@media screen and (max-width: 575px) {
+  .header__nav--item {
+    display: none;
+  }
+  .header__toggle {
+    background: transparent;
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__nav--item {
+    font-size: 14px;
+  }
+  .header__nav__item--btn {
+    font-size: 16px;
+  }
+}
 .hero {
   display: flex;
   background: linear-gradient(65deg, #362FCC 31.84%, #5D55FF 68.16%), var(--white);
-  padding: 80px 120px;
+  padding: 5rem 0 5rem 0;
   color: #ffffff;
 }
 .hero__left {
