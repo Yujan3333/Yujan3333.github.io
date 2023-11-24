@@ -11,6 +11,14 @@ body {
   color: rgba(29, 28, 49, 0.4);
 }
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
 a {
   color: #1d1c31;
   text-decoration: none;
@@ -39,7 +47,7 @@ button {
 }
 
 .bg-gradient {
-  background: linear-gradient(45deg, #1B13A6 49.59%, #443CDF 88.57%), #FFF;
+  background: #5D55FF;
 }
 
 .btn {
@@ -57,31 +65,39 @@ button {
   padding: 24px 32px;
 }
 .btn__transparent {
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: rgba(0, 0, 0, 0);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+.btn__transparent:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .header {
+  background: linear-gradient(65deg, #362FCC 31.84%, #5D55FF 68.16%), var(--white);
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
-.header-logo {
+.header__logo {
   margin: 0;
 }
-.header-nav {
+.header__nav {
   display: flex;
-  flex-basis: baseline;
   list-style-type: none;
   gap: 32px;
+  align-items: center;
 }
-.header-nav-item {
+.header__nav--item {
   color: #ffffff;
+}
+.header__item--btn {
+  font-size: 16px;
+  line-height: normal;
 }
 
 .hero {
   display: flex;
-  background: linear-gradient(45deg, #1B13A6 49.59%, #443CDF 88.57%), #FFF;
+  background: linear-gradient(65deg, #362FCC 31.84%, #5D55FF 68.16%), var(--white);
   padding: 80px 120px;
   color: #ffffff;
 }
@@ -128,18 +144,38 @@ button {
 
 .banner__company {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: #443CDF;
-  padding: 4px 2px;
+  background-color: #736de6;
 }
 
 .company__logo {
   width: 100px;
-  margin: 0 10px;
 }
 .company__logo img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.bg-company {
+  background-color: #736de6;
+}
+
+@media screen and (max-width: 575px) {
+  .banner__company {
+    display: none;
+  }
+}
+.benefit__header {
+  margin: 40px 0 40px 0;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px; /* 130% */
+  letter-spacing: -0.8px;
+}
+.benefit__wrapper {
+  display: flex;
+  gap: 1rem;
 }/*# sourceMappingURL=style.css.map */

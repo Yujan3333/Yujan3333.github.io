@@ -1,18 +1,27 @@
 .header {
     // background-color: $primary-color;
+    background: linear-gradient(65deg, #362FCC 31.84%, #5D55FF 68.16%), var(--white);
+    position: relative;
     display: flex;
     justify-content: space-between;
-    &-logo {
+    &__logo {
         margin: 0;
     }
-    &-nav {
+    &__nav {
         display: flex;
-        flex-basis: baseline;
         list-style-type: none;
         gap: 32px;
+        align-items: center; //Makes the content align with btn content
         
-        &-item {
+        &--item {
+            // color: var($gery);
             color: $white;
         }
+    }
+
+    // for the button size
+    &__item--btn{
+        font-size: $base-font-size;
+        line-height: normal;
     }
 }

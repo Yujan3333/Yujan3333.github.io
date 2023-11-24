@@ -1,7 +1,8 @@
 .hero {
     display: flex;
     // justify-content: space-between;
-    background: $primary-color;
+    // background: $primary-color;
+    background: linear-gradient(65deg, #362FCC 31.84%, #5D55FF 68.16%), var(--white);
     padding: 80px 120px;
     // height: 50rem;
     color: $white;

@@ -21,8 +21,13 @@
 
     //transparent btn (hero)
     &__transparent {
-        border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        background-color: rgba(0, 0, 0, 0);
+        // border-radius: 8px;
+        // border: 1px solid rgba(255, 255, 255, 0.2);
+        // background-color: rgba(0, 0, 0, 0);
+        background: rgba(255, 255, 255, 0.10);
+        color: $white;
+        &:hover {
+            background: rgba(255, 255, 255, 0.20);
+        }
     }
 }
