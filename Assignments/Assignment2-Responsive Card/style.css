@@ -7,37 +7,36 @@ body {
   background: var(--Header-text, #343d33);
 }
 
+/* container for making center */
+.container {
+  padding: 80px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* Whole container */
 .main {
-  /* margin: 20px; */
-  margin-top: 40px;
-  margin-bottom: 20px;
-  /* display: flex; */
-  /* flex-direction: column; */
-}
-
-
-
-.content {
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* flex-wrap: wrap;  */
-  margin: 20px;
-  padding: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.img-content > img {
-  width: 534px;
-  height: 354px;
+/* All the images in the webpage */
+img {
+  width: 100%;
 }
 
+/* Top left img */
+.img-content {
+  max-width: 50%;
+}
+
+/* Top right content */
 .text-content {
-  max-width: fit-content;
-  margin-left: 56px;
+  max-width: 40%;
 }
 
-.text-content > h1 {
+.text-content h1 {
   color: var(--white, #fff);
   font-family: Libre Baskerville;
   font-size: 45px;
@@ -48,7 +47,7 @@ body {
   margin-bottom: 10px;
 }
 
-.text-content > p {
+.text-content p {
   color: var(--white, #fff);
   font-family: Roboto;
   font-size: 20px;
@@ -58,43 +57,53 @@ body {
   margin-bottom: 10px;
 }
 
-.text-content > a {
+.text-content a {
   color: white;
   text-decoration: none;
   display: inline-flex;
-  padding: 20px 40px;
+  padding: 20px 56px;
   align-items: center;
   gap: 10px;
   border: 2px solid var(--white, #fff);
 }
 
-.bottom-img{
-  margin-left: 70px;
-}
-
 /* Media Queries */
-
-/* Mobile devices */
-@media only screen and (max-width: 575px) {
-  .content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .text-content {
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
-  .bottom-img {
-    margin-left: 0;
-  }
-}
-
-/* Tablet devices */
-@media only screen and (min-width: 576px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .main {
     flex-direction: column;
   }
+
+  .img-content {
+    /* display: flex; */
+    max-width: 100%;
+    overflow: hidden;
+  }
+  /* .img-content figure img {
+    object-fit: cover;
+  } */
+
+  .text-content {
+    order: 3;
+    max-width: 70%;
+  }
+}
+
+/* FOR Mobile devices */
+@media (max-width: 575px) {
+  .container {
+    padding: 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .text-content{
+    max-width: 96%;
+    text-align: center;
+  }
+  .text-content h1{
+    font-size: 34px;
+  }
+  .text-content p{
+    font-size: 16px;
+  }
+  
 }
