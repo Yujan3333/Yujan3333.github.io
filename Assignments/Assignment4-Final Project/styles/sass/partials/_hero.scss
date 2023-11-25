@@ -1,0 +1,94 @@
+.hero {
+    display: flex;
+    // justify-content: space-between;
+    // background: $primary-color;
+    background: linear-gradient(65deg, #362fcc 31.84%, #5d55ff 68.16%), var(--white);
+    // height: 50rem;
+    padding: 5rem 0 5rem 0;
+    color: $white;
+
+    // left hero div
+    &__left {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        gap: 2rem;
+    }
+    // right hero div
+    &__right {
+        margin-left: 50px;
+    }
+
+    // hero left div main title
+    &__title {
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 70px; /* 125% */
+        letter-spacing: -1.12px;
+        width: 80%;
+    }
+
+    // hero left div main desc
+    &__info {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 80%;
+    }
+
+    // Hero left div button section
+    &__action {
+        display: flex;
+        gap: 2rem;
+    }
+
+    // Hero left div bottom section
+    &__stat {
+        display: flex;
+        gap: 1rem;
+        &--title {
+            display: flex;
+            gap: 2rem;
+            h1 {
+                color: $white;
+                font-size: 32px;
+            }
+        }
+    }
+
+    //small screen
+    @media screen and (max-width: 575px) {
+        flex-direction: column;
+        text-align: center;
+        &__title {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 38px;
+        }
+        &__info {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    //medium screen
+    @media screen and (max-width: 768px) {
+        &__title {
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 38px;
+        }
+        &__info {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}

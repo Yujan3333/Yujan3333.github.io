@@ -1,57 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header>
-        <div class="header container">
-            <!-- Company Main Logo -->
-            <div class="header-logo">
-              <a href="#"
-                ><img src="assets/images/Vaccination.ng.png" alt="Vaccination ng" width="100%"
-              /></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/sass/style.css" />
+  </head>
+  <body>
+    <header class="bg-gradient">
+      <div class="header container">
+        <!-- Company Logo -->
+        <h1 class="header-logo">
+          <a href="#"
+            ><img src="asssets/images/LegacyLine_logo.png" alt="Legacy Line"
+          /></a>
+        </h1>
+
+        <!-- nav -->
+        <nav>
+          <ul class="header__nav">
+            <li>
+              <a class="header__nav--item" href="#">Home</a>
+            </li>
+            <li>
+              <a class="header__nav--item" href="#">Services</a>
+            </li>
+            <li>
+              <a class="header__nav--item" href="#">Contact</a>
+            </li>
+            <li>
+              <a class="header__nav--item" href="#">About us</a>
+            </li>
+            <li>
+              <button class="btn small btn__transparent header__item--btn header__nav--item">
+                Sign Up
+              </button>
+            </li>
+            <div class="header__toggle">
+              <img src="asssets/images/toggle.png" alt="toggle" height="20px" width="20px">
             </div>
-    
-            <!-- nav left  -->
-            <nav>
-              <ul class="header__nav--left">
-                <li>
-                  <a class="header__nav--item" href="#">Home</a>
-                </li>
-                <li>
-                  <a class="header__nav--item" href="#">Services</a>
-                </li>
-                <li>
-                  <a class="header__nav--item" href="#">Schedule</a>
-                </li>
-                <li>
-                  <a class="header__nav--item" href="#">Contact us</a>
-                </li>
-                <!-- <li>
-                  <button class="btn btn__bg--blue header__nav--item">
-                    Sign Up
-                  </button>
-                </li> -->
-                
-              </ul>
-
-              <!-- Nav Right for btn and toggle -->
-              <ul class="header__nav--right">
-                <button class="btn btn__bg--dark-blue header__nav--right-item">Check Status</button>
-
-                <!-- Reponsive Toggle -->
-                  <div class="header__toggle">
-                    <!-- <img src="" alt="toggle" height="20px" width="20px"> -->
-                  </div>
-                </ul>
-
-            </nav>
-          </div>
-        </header>
+          </ul>
+        </nav>
+      </div>
     </header>
-</body>
+    <main>
+      <!-- Hero section -->
+      <section class="bg-gradient">
+        <div class="hero container">
+          <!-- Left Content of hero section -->
+          <div class="hero__left">
+            <!-- hero main title -->
+            <h1 class="hero__title">
+              Discover Financial Freedom with LegacyLine
+            </h1>
+            <!-- hero main description -->
+            <p class="hero__info">
+              Welcome to our bank's website, where we provide secure financial
+              solutions tailored to meet your unique needs.
+            </p>
+
+            <!-- Hero buttons -->
+            <div class="hero__action">
+              <button class="btn btn__hero">Open Bank Account</button>
+              <button class="btn btn__transparent btn__hero">Learn More</button>
+            </div>
+
+            <!-- The bottom part of hero left -->
+            <div class="hero__stat">
+              <!-- 1st part of bottom of hero left -->
+              <div class="hero__stat--wrapper">
+                <div class="hero__stat--title">
+                  <h1>&lt;0.1%</h1>
+                </div>
+                <div class="hero_stat--detail">
+                  <p>Transaction Fees</p>
+                </div>
+              </div>
+
+              <!-- 2nd part of bottom of hero left -->
+              <div class="hero__stat--wrapper">
+                <div class="hero__stat--title">
+                  <h1>+14%</h1>
+                </div>
+                <div class="hero_stat--detail">
+                  <p>Saving Percentage</p>
+                </div>
+              </div>
+
+              <!-- 3rd part of bottom of hero left -->
+              <div class="hero__stat--wrapper">
+                <div class="hero__stat--title">
+                  <h1>+2.9%</h1>
+                </div>
+                <div class="hero_stat--detail">
+                  <p>Business Owner</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right image of hero section -->
+          <div class="hero__right">
+            <figure>
+              <img src="asssets/images/phone.png" alt="mobile"/ width="100%">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Below section Differen compony logo -->
+      <section class="bg-company">
+        <div class="banner__company container">
+          <figure class="company__logo">
+            <img src="asssets/images/binance_rect.png" alt="Binance Logo" />
+          </figure>
+          <figure class="company__logo">
+            <img src="asssets/images/IBM_rect.png" alt="IBM logo" />
+          </figure>
+          <figure class="company__logo">
+            <img src="asssets/images/PNC_rect.png" alt="PNC" />
+          </figure>
+          <figure class="company__logo">
+            <img src="asssets/images/worldbank_rect.png" alt="World Bank" />
+          </figure>
+          <figure class="company__logo">
+            <img src="asssets/images/stripe_rect.png" alt="Stripe" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- Key Benefit Section -->
+      <section class="container">
+          <!-- Main Header -->
+          <h1 class="benefit__header ">Our Key Benefits</h1>
+
+        <!-- The card components -->
+        <div class="benefit__wrapper ">
+          <!-- First Card -->
+          <article class="benefit__card">
+            <figure>
+              <img
+                src="asssets/images/financialService.svg"
+                alt="financial service"
+                class="card__image"
+              />
+            </figure>
+            <h3 class="card__title">financial services</h3>
+            <p class="card__content">
+              Banks provide a wide range of financial services, including
+              checking and savings accounts, loans, credit cards, and investment
+              production...
+            </p>
+            <a href="#" class="card-link"
+              >Read more
+              <img src="asssets/images/arrow_forward.svg" alt="next" />
+            </a>
+          </article>
+
+          <!-- Second Card -->
+          <article class="benefit__card">
+            <figure>
+              <img
+                src="asssets/images/safetyAndSecutity.png"
+                alt="safety and security"
+                class="card__image"
+              />
+            </figure>
+            <h3 class="card__title">Safety and Security</h3>
+            <p class="card__content">
+              Deposits in most banks are insured by government agencies, such as
+              the Federal Deposit Insurance Corporation (FDIC.....
+            </p>
+            <a href="#" class="card-link"
+              >Read more
+              <img src="asssets/images/arrow_forward.svg" alt="next" />
+            </a>
+          </article>
+
+          <!-- Third Card -->
+          <article class="benefit__card">
+            <figure>
+              <img
+                src="asssets/images/economicStability.png"
+                alt="building"
+                class="card__image"
+              />
+            </figure>
+            <h3 class="card__title">Economic Stability</h3>
+            <p class="card__content">
+              Deposits in most banks are insured by government agencies, such as
+              the Federal Deposit Insurance Corporation (FDIC.....
+            </p>
+            <a href="#" class="card-link"
+              >Read more
+              <img src="asssets/images/arrow_forward.svg" alt="next" />
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
