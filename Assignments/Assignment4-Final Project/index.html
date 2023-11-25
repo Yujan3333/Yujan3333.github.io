@@ -3,201 +3,152 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="styles/sass/style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header class="bg-gradient">
-      <div class="header container">
-        <!-- Company Logo -->
-        <h1 class="header-logo">
-          <a href="#"
-            ><img src="asssets/images/LegacyLine_logo.png" alt="Legacy Line"
-          /></a>
-        </h1>
+    <header class="header">
+      <!-- For spacing -->
+      <div class="container">
+        <div class="header__row">
+          <!-- Company Main Logo -->
+          <div class="header__logo">
+            <a href="#"
+              ><img
+                src="assets/images/Vaccination.ng.png"
+                alt="Vaccination ng"
+                width="100%"
+            /></a>
+            <div class="header__logo--line"></div>
+          </div>
 
-        <!-- nav -->
-        <nav>
-          <ul class="header__nav">
-            <li>
-              <a class="header__nav--item" href="#">Home</a>
-            </li>
-            <li>
-              <a class="header__nav--item" href="#">Services</a>
-            </li>
-            <li>
-              <a class="header__nav--item" href="#">Contact</a>
-            </li>
-            <li>
-              <a class="header__nav--item" href="#">About us</a>
-            </li>
-            <li>
-              <button class="btn small btn__transparent header__item--btn header__nav--item">
-                Sign Up
+          <!-- nav left  -->
+          <nav class="header__nav">
+            <ul class="header__nav--left">
+              <li>
+                <a class="header__nav--item" href="#">Home</a>
+              </li>
+              <li>
+                <a class="header__nav--item" href="#">Services</a>
+              </li>
+              <li>
+                <a class="header__nav--item" href="#">Schedule</a>
+              </li>
+              <li>
+                <a class="header__nav--item" href="#">Contact us</a>
+              </li>
+              <!-- <li>
+                  <button class="btn btn__bg--blue header__nav--item">
+                    Sign Up
+                  </button>
+                </li> -->
+            </ul>
+
+            <!-- Nav Right for btn and toggle -->
+            <ul class="header__nav--right">
+              <button class="btn btn__bg--dark-blue header__nav--btn">
+                Check Status
               </button>
-            </li>
-            <div class="header__toggle">
-              <img src="asssets/images/toggle.png" alt="toggle" height="20px" width="20px">
-            </div>
-          </ul>
-        </nav>
+
+              <!-- Reponsive Toggle -->
+              <div class="header__toggle">
+                <img
+                  src="assets/images/toggle.svg"
+                  alt="toggle"
+                  height="20px"
+                  width="20px"
+                />
+              </div>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
-    <main>
-      <!-- Hero section -->
-      <section class="bg-gradient">
-        <div class="hero container">
-          <!-- Left Content of hero section -->
-          <div class="hero__left">
-            <!-- hero main title -->
-            <h1 class="hero__title">
-              Discover Financial Freedom with LegacyLine
-            </h1>
-            <!-- hero main description -->
-            <p class="hero__info">
-              Welcome to our bank's website, where we provide secure financial
-              solutions tailored to meet your unique needs.
-            </p>
 
-            <!-- Hero buttons -->
-            <div class="hero__action">
-              <button class="btn btn__hero">Open Bank Account</button>
-              <button class="btn btn__transparent btn__hero">Learn More</button>
+    <!-- Main Body -->
+    <main class="main">
+      <!-- Hero section start -->
+      <div class="hero">
+        <div class="container">
+          <!-- for flexing the div -->
+          <div class="hero__row">
+            <!-- hero left side -->
+            <div class="hero__left">
+              <div class="hero__above-title">
+                Get Vaccinated. Boost your Immune System
+              </div>
+              <!-- hero title -->
+              <div class="hero__title">
+                COVID-19 Vaccination Got Easier With, <br />
+                <p>Vaccination.ng</p> 
+              </div>
+
+              <!-- hero main subtitle -->
+              <div class="hero__subtitle">
+                Vaccination.ng will help you find the nearest centre for
+                vaccination, in all 36 states in Nigeria.
+              </div>
+              <!-- hero btn section -->
+              <div class="hero__button">
+                <button class="btn btn__bg--blue hero__button-vaccine">
+                  Help Centre
+                </button>
+                <button class="btn btn__bg--dark-blue hero__button-vaccine">
+                  Get Vaccine
+                </button>
+              </div>
+
+              <!--hero schedule section -->
+              <div class="hero__schedule">
+                <!-- Clock img -->
+                <figure class="hero__schedule--img">
+                  <img
+                    src="assets/images/hero-4-clock.png"
+                    alt="small-clock"
+                    width="100%"
+                  />
+                </figure>
+                <!-- Text -->
+                <div class="schedule__text">Schedule your Vaccination</div>
+              </div>
             </div>
 
-            <!-- The bottom part of hero left -->
-            <div class="hero__stat">
-              <!-- 1st part of bottom of hero left -->
-              <div class="hero__stat--wrapper">
-                <div class="hero__stat--title">
-                  <h1>&lt;0.1%</h1>
-                </div>
-                <div class="hero_stat--detail">
-                  <p>Transaction Fees</p>
-                </div>
+            <!-- Hero right section -->
+            <div class="hero__right">
+              <img
+                class="hero__main--img"
+                src="assets/images/corona.png"
+                alt="corona-feature-image"
+              />
+
+              <!-- Fixed image left dr -->
+              <div class="hero__right-fixed hero__block-left">
+                <img
+                src="assets/images/hero-1-dr.png"
+                alt="small-doctor"
+                />
               </div>
 
-              <!-- 2nd part of bottom of hero left -->
-              <div class="hero__stat--wrapper">
-                <div class="hero__stat--title">
-                  <h1>+14%</h1>
-                </div>
-                <div class="hero_stat--detail">
-                  <p>Saving Percentage</p>
-                </div>
+              <!-- Fixed image right corona virus -->
+              <div class="hero__right-block hero__block-right">
+                <img
+                  src="assets/images/hero-2-corona.png"
+                  alt="virus"
+                />
               </div>
-
-              <!-- 3rd part of bottom of hero left -->
-              <div class="hero__stat--wrapper">
-                <div class="hero__stat--title">
-                  <h1>+2.9%</h1>
-                </div>
-                <div class="hero_stat--detail">
-                  <p>Business Owner</p>
+              <div class="hero__right-doctors">
+                <img src="assets/images/1 dr.png" alt="1st dr" />
+                <img src="assets/images/2 dr.png" alt="2nd dr" />
+                <img src="assets/images/3 dr.png" alt="3rd dr" />
+                <div class="hero__doctors-text">
+                  <div class="hero__doctors-upper">20+</div>
+                  <div class="hero__doctors-lower">Specialists</div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Right image of hero section -->
-          <div class="hero__right">
-            <figure>
-              <img src="asssets/images/phone.png" alt="mobile"/ width="100%">
-            </figure>
-          </div>
         </div>
-      </section>
-
-      <!-- Below section Differen compony logo -->
-      <section class="bg-company">
-        <div class="banner__company container">
-          <figure class="company__logo">
-            <img src="asssets/images/binance_rect.png" alt="Binance Logo" />
-          </figure>
-          <figure class="company__logo">
-            <img src="asssets/images/IBM_rect.png" alt="IBM logo" />
-          </figure>
-          <figure class="company__logo">
-            <img src="asssets/images/PNC_rect.png" alt="PNC" />
-          </figure>
-          <figure class="company__logo">
-            <img src="asssets/images/worldbank_rect.png" alt="World Bank" />
-          </figure>
-          <figure class="company__logo">
-            <img src="asssets/images/stripe_rect.png" alt="Stripe" />
-          </figure>
-        </div>
-      </section>
-
-      <!-- Key Benefit Section -->
-      <section class="container">
-          <!-- Main Header -->
-          <h1 class="benefit__header ">Our Key Benefits</h1>
-
-        <!-- The card components -->
-        <div class="benefit__wrapper ">
-          <!-- First Card -->
-          <article class="benefit__card">
-            <figure>
-              <img
-                src="asssets/images/financialService.svg"
-                alt="financial service"
-                class="card__image"
-              />
-            </figure>
-            <h3 class="card__title">financial services</h3>
-            <p class="card__content">
-              Banks provide a wide range of financial services, including
-              checking and savings accounts, loans, credit cards, and investment
-              production...
-            </p>
-            <a href="#" class="card-link"
-              >Read more
-              <img src="asssets/images/arrow_forward.svg" alt="next" />
-            </a>
-          </article>
-
-          <!-- Second Card -->
-          <article class="benefit__card">
-            <figure>
-              <img
-                src="asssets/images/safetyAndSecutity.png"
-                alt="safety and security"
-                class="card__image"
-              />
-            </figure>
-            <h3 class="card__title">Safety and Security</h3>
-            <p class="card__content">
-              Deposits in most banks are insured by government agencies, such as
-              the Federal Deposit Insurance Corporation (FDIC.....
-            </p>
-            <a href="#" class="card-link"
-              >Read more
-              <img src="asssets/images/arrow_forward.svg" alt="next" />
-            </a>
-          </article>
-
-          <!-- Third Card -->
-          <article class="benefit__card">
-            <figure>
-              <img
-                src="asssets/images/economicStability.png"
-                alt="building"
-                class="card__image"
-              />
-            </figure>
-            <h3 class="card__title">Economic Stability</h3>
-            <p class="card__content">
-              Deposits in most banks are insured by government agencies, such as
-              the Federal Deposit Insurance Corporation (FDIC.....
-            </p>
-            <a href="#" class="card-link"
-              >Read more
-              <img src="asssets/images/arrow_forward.svg" alt="next" />
-            </a>
-          </article>
-        </div>
-      </section>
+      </div>
     </main>
   </body>
 </html>

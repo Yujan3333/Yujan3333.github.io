@@ -1,0 +1,67 @@
+.header {
+    background-color: $primary-color;
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    align-items: center;
+    // align btn and nav
+    padding: 20px 0 70px 0;  //maintaining gap from top and bottom
+
+    &__row {
+        display: flex;
+        gap: 5rem;
+        // margin-top: 2rem;
+    }
+    // logo
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        &--line {
+            width: 100px;
+            height: 3px;
+            background: #17c2ec;
+        }
+    }
+
+    // nav
+    &__nav {
+        display: flex;
+        gap: 10rem;
+        // Pages
+        &--left {
+            display: flex;
+            // justify-content: center;
+            // align-items: center;
+            gap: 2rem;
+            // to align with btn
+            padding-top: 15px;
+        }
+
+        //ul 
+        &--item{
+            color: $grey;
+            &:hover{
+                color: $white;
+            }
+        }
+
+        // Btn and toggle
+        &--right {
+            // display: flex;
+            // gap: 2rem;
+            align-items: center;
+        }
+
+        //btn focus
+        &--btn{
+            cursor: pointer;
+            // margin-bottom: 1rem;
+        }
+    }
+
+    // Responsive toggle
+    &__toggle{
+        display: none;
+    }
+}

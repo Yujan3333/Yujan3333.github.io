@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Plus+Jakarta+Sans:wght@500&family=Poppins:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 20px 25px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btn__bg--blue {
+  color: #ffffff;
+  background: #17c2ec;
+}
+.btn__bg--dark-blue {
+  color: #17C2EC;
+  background: rgba(196, 196, 196, 0.1);
+}
+
+.header {
+  background-color: #0B153C;
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 70px 0;
+}
+.header__row {
+  display: flex;
+  gap: 5rem;
+}
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.header__logo--line {
+  width: 100px;
+  height: 3px;
+  background: #17c2ec;
+}
+.header__nav {
+  display: flex;
+  gap: 10rem;
+}
+.header__nav--left {
+  display: flex;
+  gap: 2rem;
+  padding-top: 15px;
+}
+.header__nav--item {
+  color: rgba(255, 255, 255, 0.7);
+}
+.header__nav--item:hover {
+  color: #ffffff;
+}
+.header__nav--right {
+  align-items: center;
+}
+.header__nav--btn {
+  cursor: pointer;
+}
+.header__toggle {
+  display: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  background-color: #0B153C;
+}
+.hero__row {
+  display: flex;
+}
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.hero__above-title {
+  font-size: 20px;
+  color: #17C2EC;
+  max-width: 553px;
+}
+.hero__title {
+  font-size: 48px;
+  color: #ffffff;
+}
+.hero__title p {
+  color: #17C2EC;
+}
+.hero__subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 530px;
+}
+.hero__button {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 8.25rem;
+}
+.hero__schedule {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */

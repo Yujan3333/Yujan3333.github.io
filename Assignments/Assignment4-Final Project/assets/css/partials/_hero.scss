@@ -1,0 +1,61 @@
+// all the contents in column
+.main{
+    // display: flex;
+    @include row();
+    flex-direction: column;
+}
+
+.hero{
+    background-color: $primary-color;
+
+    // flex
+    &__row{
+        // display: flex;
+        @include row();
+        
+    }
+
+    //hero left div
+    &__left{
+        @include row();
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    //text above title
+    &__above-title{
+        font-size: $base-font-size;
+        color: $light-blue;
+        max-width: 553px;
+    }
+
+    // hero main title
+    &__title{
+        font-size: $heading-font-size;
+        color: $white;
+        p{
+            color: $light-blue;
+        }
+    }
+
+    //hero subtitle
+    &__subtitle{
+        color: $grey;
+        max-width: 530px;
+    }
+
+    &__button{
+        @include row();
+        gap: 1.25rem;
+        margin-bottom: 8.25rem;  //for btn and schedule gap
+    }
+
+    // hero schedule section
+    &__schedule{
+        @include row();
+        align-items: center;
+        gap: 1.25rem ;
+        color: $white;
+    }
+
+}
