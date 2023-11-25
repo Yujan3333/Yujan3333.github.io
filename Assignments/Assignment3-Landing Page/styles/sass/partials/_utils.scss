@@ -1,24 +1,26 @@
 .container {
   // padding: 40px 80px;
-  padding: 0 80px;
+  // padding: 0 80px;
+  max-width: 1408px;
+  margin: 0 auto;
+  padding: 0 1em;
 
   // For small screen
-  @media only screen and (max-width: 575) {
-    padding: 0 20px;
+  @media only screen and (max-width: $mobile-view) {
+    max-width: 952px;
   }
-  
 
   //For medium screen
-  @media only screen and (max-width: 768px) {
-    padding: 0 40px;
+  @media only screen and (max-width: $tablet-view) {
+    max-width: 600px;
   }
 
   //For any large device
-  @media screen and (min-width: 1440px) {
-    padding: 0;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
+  // @media screen and (min-width: 1440px) {
+  //   padding: 0;
+  //   max-width: 1400px;
+  //   margin: 0 auto;
+  // }
 }
 
 // background color for purple

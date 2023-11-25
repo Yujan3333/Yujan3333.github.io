@@ -31,23 +31,18 @@ button {
 }
 
 .container {
-  padding: 0 80px;
+  max-width: 1408px;
+  margin: 0 auto;
+  padding: 0 1em;
 }
-@media only screen and (max-width: 575) {
+@media only screen and (max-width: 575px) {
   .container {
-    padding: 0 20px;
+    max-width: 952px;
   }
 }
 @media only screen and (max-width: 768px) {
   .container {
-    padding: 0 40px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .container {
-    padding: 0;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 600px;
   }
 }
 
