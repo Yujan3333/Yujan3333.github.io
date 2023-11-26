@@ -11,7 +11,9 @@
     // flex
     &__row {
         display: flex;
+        gap: 120px;
         // @include row();
+        // max-width: 100%;
     }
 
     //hero left div
@@ -20,13 +22,15 @@
         // @include row();
         flex-direction: column;
         gap: 2.5rem;
+        flex-basis: 45%;
     }
 
     //text above title
     &__above-title {
         font-size: $base-font-size;
         color: $light-blue;
-        max-width: 553px;
+        // max-width: 553px;
+        flex-basis: 30%;
     }
 
     // hero main title
@@ -85,8 +89,10 @@
                 0px 4px 4px 0px rgba(0, 0, 0, 0.1),
                 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             top: 543px;
-            left: -50px;
+            left: 97px;
             padding: 10px;
+            transform: translate(-50%,-50%);
+
             // gap:5px
         }
     }
@@ -96,13 +102,15 @@
         &--left {
             position: absolute;
             // top: 246px;
-            top: calc(52% - 100px);
-            left: -50px;
+            top: calc(55% - 100px);
+            left: 0px;
+            transform: translate(-50%,-50%);
         }
         &--right {
             position: absolute;
-            top: calc(52% - 100px);
-            right: -50px;
+            top: calc(55% - 100px);
+            right: -100px;
+            transform: translate(-50%,-50%);
         }
     }
 
@@ -123,4 +131,45 @@
             }
         }
     }
+}
+
+@media screen and (max-width:$tablet) {
+    .hero{
+        &__row {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+    }
+
+    &__block
+    {
+        &--left{
+            position: absolute;
+            top: 50%;
+            left: 10%;
+        }
+        &--right{
+            position: absolute;
+            top: 50%;
+            right: -6%;
+        }
+    }
+    &__right{
+        max-width: 670px;
+        padding: 70px;
+        &--doctors{
+            transform: translate(-30%,40%);
+        }
+    }
+
+    &__schedule{
+        display: none;
+        &--responsive{
+            display: flex;
+            // display: block;
+            color: $white;
+        }
+    }
+    
+}
 }

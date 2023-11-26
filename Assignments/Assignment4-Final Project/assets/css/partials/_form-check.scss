@@ -63,6 +63,7 @@
             justify-content: center;
             align-items: center;
             border: 3px solid #17c2ec;
+            max-width: 450px;
         }
 
         // Bottom text div
@@ -81,6 +82,34 @@
             & a {
                 text-decoration: underline;
                 color: $light-blue;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$tablet){
+    .form1{
+        &__row{
+            display: flex;
+            flex-direction: column;
+        }
+
+        // Main form
+        &__bottom{  
+            &--form{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+            }
+
+            // check btn
+            &--btn{
+                max-width: 130px;
             }
         }
     }

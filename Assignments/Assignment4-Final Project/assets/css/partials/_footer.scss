@@ -75,6 +75,10 @@
 
         &--text{
             color: $white;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
         }
         &--line{
             width: 100px;
@@ -88,7 +92,11 @@
         display: flex;
         gap: 1.56rem;
         a{
-            color: $white;
+            // color: $white;
+            color: $grey;
+            &:hover{
+                color: $white;
+            }
         }
     }
 }

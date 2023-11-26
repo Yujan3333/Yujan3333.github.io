@@ -3,10 +3,18 @@ $font-family: "Montserrat", sans-serif;
 
 //font size
 $base-font-size:20px;
+$tablet-base-font-size:18px;
+$mobile-base-font-size:16px;
 $heading-font-size:48px;
+$tablet-heading-font-size:32px;
+$mobile-heading-font-size:24px;
 
 //colors
 $primary-color:#0B153C;
 $light-blue:#17C2EC;
 $white:#ffffff;
 $grey: rgba(255, 255, 255, 0.70); 
+
+// Responsive Device px
+$mobile:575px;
+$tablet:768px;

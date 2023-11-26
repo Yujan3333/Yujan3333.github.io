@@ -2,11 +2,12 @@
     background-color: $primary-color;
     display: flex;
     // @include row();
-    gap: 10rem;
+    // gap: 10rem;
     justify-content: center;
     align-items: center;
     // align btn and nav
     padding: 20px 0 70px 0;  //maintaining gap from top and bottom
+    // overflow: visible;
 
     &__row {
         display: flex;
@@ -20,6 +21,13 @@
         // @include row();
         flex-direction: column;
         margin-top: 10px;
+        &--text{
+            color: $white;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
         &--line {
             width: 100px;
             height: 3px;
@@ -31,7 +39,8 @@
     &__nav {
         display: flex;
         // @include row();
-        gap: 10rem;
+        // gap: 10rem;
+        gap: 230px;
         // Pages
         &--left {
             display: flex;
@@ -70,3 +79,61 @@
         display: none;
     }
 }
+
+// tablet
+// @media screen and (max-width:$tablet) {
+//     .header{
+//         &__row{
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//         }
+//     }
+// }
+
+// Tablet
+@media screen and (max-width: $tablet) {
+    .header {
+    //   flex-direction: column; 
+    //   align-items: center; 
+  
+      &__row {
+        display: flex;
+        gap: 20rem; // Reduce the gap between items
+      }
+  
+      // Logo
+      &__logo {
+        margin-top: 0; // Adjust margin
+      }
+  
+      // Navigation
+      &__nav {
+        // gap: 3rem;
+        display: none;
+      }
+  
+      // Responsive toggle
+      &__toggle {
+        display: inline-block; // Show the toggle
+      }
+    }
+  }
+
+  @media screen and (max-width:$mobile){
+    // Navigation
+    .header{
+        &__row{
+            display: flex;
+            gap:14rem;
+        }
+        &__nav {
+        display: none;
+  
+      // Responsive toggle
+      &__toggle {
+        display: block; // Show the toggle
+      }
+  }
+}
+  }
