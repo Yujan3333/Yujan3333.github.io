@@ -238,4 +238,86 @@ body {
 }
 .detail__vaccine--subtitle {
   color: #ffffff;
+}
+
+.company {
+  background: rgba(255, 255, 255, 0.5019607843);
+}
+.company__row {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  gap: 3rem;
+}
+
+.form1 {
+  background-color: #0B153C;
+  padding-top: 60px;
+}
+.form1__row {
+  width: 100%;
+  border-radius: 20px;
+  background: rgba(196, 196, 196, 0.1);
+}
+.form1__upper {
+  border-radius: 20px 20px 0px 0px;
+  background: rgba(196, 196, 196, 0.05);
+  padding: 36px 93px;
+  box-sizing: border-box;
+}
+.form1__upper--title {
+  color: #ffffff;
+}
+.form1__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 20px 93px 36px;
+}
+.form1__bottom--form {
+  display: flex;
+}
+.form1__bottom--form form {
+  display: flex;
+  gap: 1rem;
+  margin-right: 15px;
+}
+.form1__bottom--input {
+  width: 100%;
+  padding: 20px 26px;
+  box-sizing: border-box;
+  color: #ffffff;
+  border-radius: 20px;
+  background: rgba(196, 196, 196, 0.1);
+  font-size: 20px;
+  margin-left: 5px;
+}
+.form1__bottom--input:first-child {
+  border: 3px solid #17c2ec;
+}
+.form1__bottom--input:first-child::-moz-placeholder {
+  color: #ffffff;
+}
+.form1__bottom--input:first-child::placeholder {
+  color: #ffffff;
+}
+.form1__bottom--btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #17c2ec;
+}
+.form1__bottom--text {
+  padding: 21px 174px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: rgba(196, 196, 196, 0.05);
+}
+.form1__bottom--para {
+  color: #17C2EC;
+}
+.form1__bottom--para a {
+  text-decoration: underline;
+  color: #17C2EC;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+.company{
+    background: #FFFFFF80 ;
+    &__row{
+        display: flex;
+        align-items: center;
+        padding: 16px 0;
+        gap:3rem;
+        
+    }
+}
