@@ -147,4 +147,40 @@ body {
   align-items: center;
   gap: 1.25rem;
   color: #ffffff;
+}
+.hero__right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.hero__right--doctors {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 20px;
+  background: rgba(196, 196, 196, 0.2);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  top: 543px;
+  left: -50px;
+}
+.hero__block--left {
+  position: absolute;
+  top: calc(52% - 100px);
+  left: -50px;
+}
+.hero__block--right {
+  position: absolute;
+  top: calc(52% - 100px);
+  right: -50px;
+}
+.hero__doctors--text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.hero__doctors--text-upper {
+  color: #ffffff;
+}
+.hero__doctors--text-lower {
+  color: #17C2EC;
 }/*# sourceMappingURL=style.css.map */

@@ -1,61 +1,116 @@
 // all the contents in column
-.main{
+.main {
     // display: flex;
     @include row();
     flex-direction: column;
 }
 
-.hero{
+.hero {
     background-color: $primary-color;
 
     // flex
-    &__row{
+    &__row {
         // display: flex;
         @include row();
-        
     }
 
     //hero left div
-    &__left{
+    &__left {
         @include row();
         flex-direction: column;
         gap: 2.5rem;
     }
 
     //text above title
-    &__above-title{
+    &__above-title {
         font-size: $base-font-size;
         color: $light-blue;
         max-width: 553px;
     }
 
     // hero main title
-    &__title{
+    &__title {
         font-size: $heading-font-size;
         color: $white;
-        p{
+        p {
             color: $light-blue;
         }
     }
 
     //hero subtitle
-    &__subtitle{
+    &__subtitle {
         color: $grey;
         max-width: 530px;
     }
 
-    &__button{
+    &__button {
         @include row();
         gap: 1.25rem;
-        margin-bottom: 8.25rem;  //for btn and schedule gap
+        margin-bottom: 8.25rem; //for btn and schedule gap
     }
 
     // hero schedule section
-    &__schedule{
+    &__schedule {
         @include row();
         align-items: center;
-        gap: 1.25rem ;
+        gap: 1.25rem;
         color: $white;
     }
 
+    // hero right div
+    &__right {
+        @include row();
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        position: relative;
+        // top: 20px;
+
+        // bottom 3 dr
+        &--doctors {
+            @include row();
+            align-items: center;
+            position: absolute;
+            border-radius: 20px;
+            background: rgba(196, 196, 196, 0.2);
+            box-shadow:
+                0px 4px 4px 0px rgba(0, 0, 0, 0.1),
+                0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            top: 543px;
+            left: -50px;
+            // gap:5px
+        }
+    }
+
+    //left small dr img and righ small corona img
+    &__block {
+        &--left {
+            position: absolute;
+            // top: 246px;
+            top: calc(52% - 100px);
+            left: -50px;
+        }
+        &--right {
+            position: absolute;
+            top: calc(52% - 100px);
+            right: -50px;
+        }
+    }
+
+    // Text of the 3 bottom 3 dr
+    &__doctors{
+        &--text{
+            @include row();
+            flex-direction: column;
+            padding-left: 20px;
+            // 20+
+            &-upper{
+                color: $white;
+            }
+            // Specialist
+            &-lower{
+                color: $light-blue;
+            }
+        }
+    }
 }
