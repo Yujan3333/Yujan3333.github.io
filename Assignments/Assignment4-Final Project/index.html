@@ -10,7 +10,7 @@
     <header class="header">
       <!-- For spacing -->
       <div class="container">
-        <div class="header__row">
+        <div class="header__flex">
           <!-- Company Main Logo -->
           <div class="header__logo">
             <a href="#"
@@ -68,10 +68,10 @@
     <!-- Main Body -->
     <main class="main">
       <!-- Hero section start -->
-      <div class="hero">
+      <section class="hero">
         <div class="container">
           <!-- for flexing the div -->
-          <div class="hero__row">
+          <div class="hero__flex">
             <!-- hero left side -->
             <div class="hero__left">
               <div class="hero__above-title">
@@ -80,7 +80,7 @@
               <!-- hero title -->
               <div class="hero__title">
                 COVID-19 Vaccination Got Easier With, <br />
-                <p>Vaccination.ng</p> 
+                <p>Vaccination.ng</p>
               </div>
 
               <!-- hero main subtitle -->
@@ -109,7 +109,7 @@
                   />
                 </figure>
                 <!-- Text -->
-                <div class="schedule__text">Schedule your Vaccination</div>
+                <p class="schedule__text">Schedule your Vaccination</p>
               </div>
             </div>
 
@@ -122,19 +122,13 @@
               />
 
               <!-- Fixed image left dr -->
-              <div class=" hero__block--left">
-                <img
-                src="assets/images/hero-1-dr.png"
-                alt="small-doctor"
-                />
+              <div class="hero__block--left">
+                <img src="assets/images/hero-1-dr.png" alt="small-doctor" />
               </div>
 
               <!-- Fixed image right corona virus -->
               <div class="hero__block--right">
-                <img
-                  src="assets/images/hero-2-corona.png"
-                  alt="virus"
-                />
+                <img src="assets/images/hero-2-corona.png" alt="virus" />
               </div>
 
               <!-- bottom 3 dr -->
@@ -143,14 +137,71 @@
                 <img src="assets/images/2 dr.png" alt="2nd dr" />
                 <img src="assets/images/3 dr.png" alt="3rd dr" />
                 <div class="hero__doctors--text">
-                  <div class="hero__doctors--text-upper">20+</div>
-                  <div class="hero__doctors--text-lower">Specialists</div>
+                  <p class="hero__doctors--text-upper">20+</p>
+                  <p class="hero__doctors--text-lower">Specialists</p>
                 </div>
               </div>
             </div>
+
+            <!-- For responsive  -->
+            <div class="hero__schedule--responsive">
+              <!-- Clock img -->
+              <figure class="hero__schedule--img">
+                <img
+                  src="assets/images/hero-4-clock.png"
+                  alt="small-clock"
+                  width="100%"
+                />
+              </figure>
+              <!-- Text -->
+              <p class="schedule__text">Schedule your Vaccination</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Bottom schedule section -->
+      <section class="detail">
+        <div class="container">
+          <div class="detail__flex">
+
+            <!-- location section -->
+            <div class="detail__location">
+              <figure class="detail__location--image">
+                <img src="assets/images/hero-4-map-pin.png" alt="location-map">
+              </figure>
+              <div class="detail__location--text">
+                <p class="detail__location--title">Location</p>
+                <p class="detail__location--subtitle">Ikeja Lagos, Nigeria</p>
+              </div>
+            </div>
+            <!-- date section -->
+            <div class="detail__date">
+              <figure class="detail__date-image">
+                <img src="assets/images/hero-5-date.png" alt="date-calender">
+              </figure>
+              <div class="detail__date--text">
+                <p class="detail__date--title">Date</p>
+                <p class="detail__date--subtitle">29 February, 2022</p>
+              </div>
+            </div>
+            <!-- vaccine type -->
+            <div class="detail__vaccine">
+              <figure class="detail__vaccine--image">
+                <img src="assets/images/herp-6-shield.png" alt="vaccine-shield">
+              </figure>
+              <div class="detail__vaccine--text">
+                <p class="detail__vaccine--title">Vaccine Type</p>
+                <p class="detail__vaccine--subtitle">Mordena</p>
+              </div>
+            </div>
+
+            <!-- Submit btn -->
+            <button class="btn btn__bg--blue detail__btn">Submit</button>
+          </div>
+        </div>
+
+      </section>
     </main>
   </body>
 </html>

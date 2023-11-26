@@ -66,7 +66,7 @@ body {
   align-items: center;
   padding: 20px 0 70px 0;
 }
-.header__row {
+.header__flex {
   display: flex;
   gap: 5rem;
 }
@@ -113,7 +113,7 @@ body {
 .hero {
   background-color: #0B153C;
 }
-.hero__row {
+.hero__flex {
   display: flex;
 }
 .hero__left {
@@ -148,6 +148,9 @@ body {
   gap: 1.25rem;
   color: #ffffff;
 }
+.hero__schedule--responsive {
+  display: none;
+}
 .hero__right {
   display: flex;
   flex-direction: column;
@@ -162,6 +165,7 @@ body {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   top: 543px;
   left: -50px;
+  padding: 10px;
 }
 .hero__block--left {
   position: absolute;
@@ -183,4 +187,55 @@ body {
 }
 .hero__doctors--text-lower {
   color: #17C2EC;
+}
+
+.detail {
+  padding-top: 10px;
+  background-color: #0B153C;
+}
+.detail__flex {
+  display: flex;
+  border-radius: 20px 20px 0px 0px;
+  background: rgba(196, 196, 196, 0.05);
+  box-shadow: 0px -10px 0px 0px rgba(196, 196, 196, 0.05);
+  padding: 40px;
+}
+.detail__location {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 50px;
+}
+.detail__location--title {
+  color: rgba(255, 255, 255, 0.7);
+}
+.detail__location--subtitle {
+  color: #ffffff;
+}
+.detail__date {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 50px;
+}
+.detail__date--title {
+  color: rgba(255, 255, 255, 0.7);
+}
+.detail__date--subtitle {
+  color: #ffffff;
+}
+.detail__vaccine {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 19rem;
+}
+.detail__vaccine--text {
+  max-width: 160px;
+}
+.detail__vaccine--title {
+  color: rgba(255, 255, 255, 0.7);
+}
+.detail__vaccine--subtitle {
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */

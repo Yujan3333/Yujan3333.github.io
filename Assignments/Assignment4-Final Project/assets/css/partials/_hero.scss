@@ -1,7 +1,7 @@
 // all the contents in column
 .main {
     // display: flex;
-    @include row();
+    @include flex();
     flex-direction: column;
 }
 
@@ -9,14 +9,14 @@
     background-color: $primary-color;
 
     // flex
-    &__row {
+    &__flex {
         // display: flex;
-        @include row();
+        @include flex();
     }
 
     //hero left div
     &__left {
-        @include row();
+        @include flex();
         flex-direction: column;
         gap: 2.5rem;
     }
@@ -44,22 +44,25 @@
     }
 
     &__button {
-        @include row();
+        @include flex();
         gap: 1.25rem;
         margin-bottom: 8.25rem; //for btn and schedule gap
     }
 
     // hero schedule section
     &__schedule {
-        @include row();
+        @include flex();
         align-items: center;
         gap: 1.25rem;
         color: $white;
+        &--responsive{
+            display: none;
+        }
     }
 
     // hero right div
     &__right {
-        @include row();
+        @include flex();
         flex-direction: column;
         // justify-content: center;
         // align-items: center;
@@ -68,7 +71,7 @@
 
         // bottom 3 dr
         &--doctors {
-            @include row();
+            @include flex();
             align-items: center;
             position: absolute;
             border-radius: 20px;
@@ -78,6 +81,7 @@
                 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             top: 543px;
             left: -50px;
+            padding: 10px;
             // gap:5px
         }
     }
@@ -100,7 +104,7 @@
     // Text of the 3 bottom 3 dr
     &__doctors{
         &--text{
-            @include row();
+            @include flex();
             flex-direction: column;
             padding-left: 20px;
             // 20+

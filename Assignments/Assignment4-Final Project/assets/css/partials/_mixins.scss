@@ -1,4 +1,4 @@
-// @mixin flexContainer($direction: row, $justify: flex-start, $align: stretch) {
+// @mixin flexContainer($direction: flex, $justify: flex-start, $align: stretch) {
 //     display: flex;
 //     flex-direction: $direction;
 //     justify-content: $justify;
@@ -6,6 +6,6 @@
 // }
 
 // display flex
-  @mixin row(){
+  @mixin flex(){
     display: flex;
   }
