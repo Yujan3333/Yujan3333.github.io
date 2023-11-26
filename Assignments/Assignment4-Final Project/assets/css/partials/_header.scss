@@ -1,20 +1,23 @@
 .header {
     background-color: $primary-color;
-    display: flex;
+    // display: flex;
+    @include row();
     gap: 10rem;
     justify-content: center;
     align-items: center;
     // align btn and nav
     padding: 20px 0 70px 0;  //maintaining gap from top and bottom
 
-    &__flex {
-        display: flex;
+    &__row {
+        // display: flex;
+        @include row();
         gap: 5rem;
         // margin-top: 2rem;
     }
     // logo
     &__logo {
-        display: flex;
+        // display: flex;
+        @include row();
         flex-direction: column;
         margin-top: 10px;
         &--line {
@@ -26,11 +29,13 @@
 
     // nav
     &__nav {
-        display: flex;
+        // display: flex;
+        @include row();
         gap: 10rem;
         // Pages
         &--left {
-            display: flex;
+            // display: flex;
+            @include row();
             // justify-content: center;
             // align-items: center;
             gap: 2rem;
