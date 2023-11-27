@@ -1,6 +1,12 @@
 .header {
-    background-color: $primary-color;
-    display: flex;
+  display: flex;
+  flex: 0 0 auto;
+  
+  background: url(../../images/main-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $primary-color;
+  
     // @include row();
     // gap: 10rem;
     justify-content: center;

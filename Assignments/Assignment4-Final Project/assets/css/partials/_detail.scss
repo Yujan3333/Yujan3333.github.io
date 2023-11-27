@@ -64,3 +64,10 @@
     }
 }
 
+@media screen and (max-width:$tablet) {
+    .detail{
+        &__vaccine{
+            margin-right: 3rem;
+        }
+    }
+}

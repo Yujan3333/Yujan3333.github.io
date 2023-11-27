@@ -44,6 +44,11 @@ body {
     max-width: 668px;
   }
 }
+@media screen and (max-width: 575px) {
+  .container {
+    max-width: 300px;
+  }
+}
 .btn {
   padding: 20px 25px;
   border-radius: 20px;
@@ -64,8 +69,12 @@ body {
 }
 
 .header {
-  background-color: #0B153C;
   display: flex;
+  flex: 0 0 auto;
+  background: url(../../images/main-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0B153C;
   justify-content: center;
   align-items: center;
   padding: 20px 0 70px 0;
@@ -149,6 +158,9 @@ body {
 }
 
 .hero {
+  background: url(../../images/main-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: #0B153C;
 }
 .hero__row {
@@ -260,7 +272,9 @@ body {
   }
   .hero__schedule--responsive {
     display: flex;
+    gap: 16px;
     color: #ffffff;
+    align-items: center;
   }
 }
 .detail {
@@ -314,6 +328,11 @@ body {
   color: #ffffff;
 }
 
+@media screen and (max-width: 768px) {
+  .detail__vaccine {
+    margin-right: 3rem;
+  }
+}
 .company {
   background: rgba(255, 255, 255, 0.5019607843);
 }

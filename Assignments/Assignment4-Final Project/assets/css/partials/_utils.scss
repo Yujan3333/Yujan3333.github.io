@@ -9,3 +9,9 @@
         max-width: 668px;;
     }
 }
+
+@media screen and (max-width:$mobile) {
+    .container{
+        max-width: 300px;
+    }    
+}

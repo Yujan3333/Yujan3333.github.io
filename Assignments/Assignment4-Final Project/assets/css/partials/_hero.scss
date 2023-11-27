@@ -6,6 +6,10 @@
 }
 
 .hero {
+    // @include main-bg();
+    background: url(../../images/main-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: $primary-color;
 
     // flex
@@ -166,8 +170,10 @@
         display: none;
         &--responsive{
             display: flex;
+            gap: 16px;
             // display: block;
             color: $white;
+            align-items: center;
         }
     }
     
