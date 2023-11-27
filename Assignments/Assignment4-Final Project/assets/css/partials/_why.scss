@@ -1,0 +1,110 @@
+.why {
+    @include main-bg();
+    &__row {
+        padding-bottom: 40px;
+    }
+    // top section of title and subtitle
+    &__top {
+        display: flex;
+        gap: 41px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        &--title {
+            color: $white;
+            font-size: $heading-font-size;
+        }
+        &--subtitle {
+            color: $grey;
+            margin-left: 100px;
+        }
+    }
+
+    // bottom 3 cards
+    &__bottom {
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+        // flex-direction: column;
+
+        // first card
+        &--first {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 449.064px;
+            height: 498.961px;
+            flex-shrink: 0;
+            border-radius: 49.896px 149.688px 49.896px 49.896px;
+            background: rgba(196, 196, 196, 0.2);
+            padding: 20px;
+        }
+
+        &--sec-third {
+            height: 300px;
+            display: flex;
+            gap: 20px;
+        }
+        &--second {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            padding: 40px 48px 59px 40px;
+            box-sizing: border-box;
+        }
+        &--third {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            padding: 40px 48px 59px 40px;
+            box-sizing: border-box;
+        }
+    }
+
+    // bottom 3 content read more
+    &__first {
+        &--title {
+            color: $light-blue;
+        }
+        &--subtitle {
+            color: $white;
+        }
+        &--read-more {
+            display: flex;
+            flex-direction: row;
+            color: $light-blue;
+        }
+    }
+    &__second{
+       
+        &--title {
+            color: $white;
+            font-size: $base-font-size;
+        }
+        
+        &--read-more {
+            display: flex;
+            flex-direction: row;
+            color: $light-blue;
+        }
+    }
+    &__third{
+        
+       
+            &--title {
+                color: $white;
+                font-size: $base-font-size;
+            }
+            
+            &--read-more {
+                display: flex;
+                flex-direction: row;
+                color: $light-blue;
+            
+        }
+    }
+}

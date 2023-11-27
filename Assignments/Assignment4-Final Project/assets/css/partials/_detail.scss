@@ -3,6 +3,7 @@
 .detail{
     padding-top: 10px;
     background-color: $primary-color;
+    @include main-bg();
     &__row {
         display: flex;
         // @include row();

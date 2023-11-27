@@ -6,11 +6,11 @@
 }
 
 .hero {
-    // @include main-bg();
-    background: url(../../images/main-background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: $primary-color;
+    // background-color: $primary-color;
+    @include main-bg();
+    // background: url('../images/main-background.png');
+    // background-size: cover;
+    // background-repeat: no-repeat;
 
     // flex
     &__row {

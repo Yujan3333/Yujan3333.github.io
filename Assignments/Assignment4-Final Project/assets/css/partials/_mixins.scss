@@ -10,8 +10,8 @@
   //   display: flex;
   // }
 
-  @mixin main-bg{
-    background: url(../../images/main-background.png);
+  @mixin main-bg(){
+    background: url('../images/main-background.png');
     background-size: cover;
     background-repeat: no-repeat;
   }

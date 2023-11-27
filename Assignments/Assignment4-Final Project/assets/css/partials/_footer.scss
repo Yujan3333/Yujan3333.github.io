@@ -1,17 +1,16 @@
 .footer {
     background-color: $primary-color;
+    @include main-bg();
     position: relative;
 
     &__row {
         display: flex;
-        gap: 10.12rem;
+        gap: 7.12rem;
         padding-top: 500px;
         padding-bottom: 135px;
         position: relative;
         // justify-content: center;
         // align-items: center;
-
-        
     }
 
     // footer email card
@@ -30,6 +29,7 @@
         justify-content: center;
         align-items: center;
         padding: 40px 200px 100px 200px;
+
         // input form and send img
         &-block {
             position: relative;
@@ -71,16 +71,15 @@
     // }
 
     // bottom text
-    &__logo{
-
-        &--text{
+    &__logo {
+        &--text {
             color: $white;
             font-size: 32px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
         }
-        &--line{
+        &--line {
             width: 100px;
             height: 3px;
             background-color: $light-blue;
@@ -88,15 +87,52 @@
     }
 
     // nav menu of footer
-    &__menu{
+    &__menu {
         display: flex;
         gap: 1.56rem;
-        a{
+        a {
             // color: $white;
             color: $grey;
-            &:hover{
+            &:hover {
                 color: $white;
             }
         }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .footer {
+        // Whole div
+        &__row {
+            display: flex;
+            flex-direction: column;
+            gap: 2.12rem;
+            padding-top: 649px;
+            padding-bottom: 135px;
+        }
+        &__form {
+            // max-width: 315px;
+            width: 50%;
+            left: -152px;
+
+            padding: 40px 130px 80px 130px;
+            margin-left: 175px;
+            // input text
+            &--email {
+                font-size: 18px;
+            }
+        }
+
+        // form title
+        &__title {
+            font-size: 32px;
+        }
+
+        // footer form subtitle
+        &__subtitle {
+            font-size: 20px;
+        }
+
+        // bottom logo text
     }
 }

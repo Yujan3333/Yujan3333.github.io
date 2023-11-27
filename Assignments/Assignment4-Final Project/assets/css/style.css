@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1170px;
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
@@ -71,10 +71,10 @@ body {
 .header {
   display: flex;
   flex: 0 0 auto;
-  background: url(../../images/main-background.png);
+  background-color: #0B153C;
+  background: url("../images/main-background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #0B153C;
   justify-content: center;
   align-items: center;
   padding: 20px 0 70px 0;
@@ -158,10 +158,9 @@ body {
 }
 
 .hero {
-  background: url(../../images/main-background.png);
+  background: url("../images/main-background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #0B153C;
 }
 .hero__row {
   display: flex;
@@ -280,6 +279,9 @@ body {
 .detail {
   padding-top: 10px;
   background-color: #0B153C;
+  background: url("../images/main-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .detail__row {
   display: flex;
@@ -345,6 +347,9 @@ body {
 
 .form1 {
   background-color: #0B153C;
+  background: url("../images/main-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 60px;
 }
 .form1__row {
@@ -421,6 +426,10 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .form1__bottom--text {
+    padding: 0;
+    font-size: 14px;
+  }
   .form1__bottom--form {
     display: flex;
     flex-direction: column;
@@ -435,13 +444,107 @@ body {
     max-width: 130px;
   }
 }
+.why {
+  background: url("../images/main-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.why__row {
+  padding-bottom: 40px;
+}
+.why__top {
+  display: flex;
+  gap: 41px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.why__top--title {
+  color: #ffffff;
+  font-size: 48px;
+}
+.why__top--subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 100px;
+}
+.why__bottom {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.why__bottom--first {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 449.064px;
+  height: 498.961px;
+  flex-shrink: 0;
+  border-radius: 49.896px 149.688px 49.896px 49.896px;
+  background: rgba(196, 196, 196, 0.2);
+  padding: 20px;
+}
+.why__bottom--sec-third {
+  height: 300px;
+  display: flex;
+  gap: 20px;
+}
+.why__bottom--second {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  padding: 40px 48px 59px 40px;
+  box-sizing: border-box;
+}
+.why__bottom--third {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  padding: 40px 48px 59px 40px;
+  box-sizing: border-box;
+}
+.why__first--title {
+  color: #17C2EC;
+}
+.why__first--subtitle {
+  color: #ffffff;
+}
+.why__first--read-more {
+  display: flex;
+  flex-direction: row;
+  color: #17C2EC;
+}
+.why__second--title {
+  color: #ffffff;
+  font-size: 20px;
+}
+.why__second--read-more {
+  display: flex;
+  flex-direction: row;
+  color: #17C2EC;
+}
+.why__third--title {
+  color: #ffffff;
+  font-size: 20px;
+}
+.why__third--read-more {
+  display: flex;
+  flex-direction: row;
+  color: #17C2EC;
+}
+
 .footer {
   background-color: #0B153C;
+  background: url("../images/main-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
 }
 .footer__row {
   display: flex;
-  gap: 10.12rem;
+  gap: 7.12rem;
   padding-top: 500px;
   padding-bottom: 135px;
   position: relative;
@@ -509,4 +612,29 @@ body {
 }
 .footer__menu a:hover {
   color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__row {
+    display: flex;
+    flex-direction: column;
+    gap: 2.12rem;
+    padding-top: 649px;
+    padding-bottom: 135px;
+  }
+  .footer__form {
+    width: 50%;
+    left: -152px;
+    padding: 40px 130px 80px 130px;
+    margin-left: 175px;
+  }
+  .footer__form--email {
+    font-size: 18px;
+  }
+  .footer__title {
+    font-size: 32px;
+  }
+  .footer__subtitle {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
