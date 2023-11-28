@@ -102,7 +102,7 @@ body {
 }
 .header__nav {
   display: flex;
-  gap: 230px;
+  gap: 190px;
 }
 .header__nav--left {
   display: flex;
