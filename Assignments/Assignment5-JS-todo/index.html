@@ -11,28 +11,19 @@
 
 
   <body>
-    <header class="header bg-secondary text-white py-3">
+    <header class="bg-secondary text-white py-3">
       <div class="container">
-        <!-- Upper search section -->
-        <div class="heading-text h1">To Do List</div>
-        <!-- You can add a search box if needed -->
-        <!-- <div class="searchBox">
-          <input
-            type="text"
-            class="searchBox main-text form-control"
-            placeholder="Search"
-          />
-        </div> -->
+        <h1 class="heading-text">To Do List</h1>
       </div>
     </header>
-
-    <main>
-      <div class="container mt-3">
-        <!-- add section -->
-        <div class=" d-flex mb-3">
+  
+    <main class="mt-3">
+      <div class="container">
+        <!-- Add section -->
+        <div class="d-flex mb-3">
           <input
             type="text"
-            class="main-text form-control"
+            class="form-control"
             id="addTaskInput"
             placeholder="Add task"
           />
@@ -40,25 +31,25 @@
             type="button"
             class="btn btn-success ml-2"
             id="addTaskSubmit"
-            "
-            >
-            <!-- onclick="addTask() -->
+            onclick="addTask()"
+          >
             Add
           </button>
         </div>
-
-        <!-- list section -->
+  
         <div>
-          <h2 class="mb-3 ">Tasks To Be Done</h2>
-          <ul id="listItem" class="list-group"></ul>
+          <h2 class="mb-3">Tasks To Be Done</h2>
+          <ul id="listItem" class="list-group">
+          </ul>
         </div>
-
+  
         <!-- Completed list item -->
         <div>
           <h2 class="mb-3">Tasks Completed</h2>
-          <ul id="completedItem" class="list-group"></ul>
+          <ul id="completedItem" class="list-group">
+          
+          </ul>
         </div>
-      </div>
     </main>
 
     <script src="assets/script.js"></script>
