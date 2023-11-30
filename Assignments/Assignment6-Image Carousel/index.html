@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <main>
+      <div class="carousel-container">
+        <div class="carousel-image-wrapper">
+          <img src="assets/image/1.jpg" alt="1">
+          <img src="assets/image/2.jpg" alt="Image2" />
+          <img src="assets/image/3.jpg" alt="Image3" />
+          <img src="assets/image/4.jpg" alt="Image4" />
+        </div>
+
+        <!-- dots -->
+        <div class="carousel-dots"></div>
+
+        <!-- left and right control -->
+        <div class="carousel-controls">
+          <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
+          <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
+        </div>
+    </main>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
