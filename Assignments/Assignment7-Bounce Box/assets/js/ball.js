@@ -111,6 +111,34 @@ checkWallCollision = (boundaryLeft, boundaryTop, boundaryWidth, boundaryHeight) 
       this.y = boundaryHeight - BALL_HEIGHT;
     }
   };
+
+
+
+  //ball collision with another
+  checkBallCollision = (otherBall) => {
+    const dx = this.x - otherBall.x;
+    const dy = this.y - otherBall.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    // Check if the balls are touching or overlapping
+    if (distance < BALL_WIDTH) {
+        // Calculate the angle between the two balls
+        const angle = Math.atan2(dy, dx);
+
+        // Calculate the new velocities after collision
+        const thisSpeed = Math.sqrt(this.dx ** 2 + this.dy ** 2);
+        const otherSpeed = Math.sqrt(otherBall.dx ** 2 + otherBall.dy ** 2);
+
+        const thisNewSpeed = otherSpeed;
+        const otherNewSpeed = thisSpeed;
+
+        // Update velocities
+        this.dx = thisNewSpeed * Math.cos(angle);
+        this.dy = thisNewSpeed * Math.sin(angle);
+        otherBall.dx = otherNewSpeed * Math.cos(angle + Math.PI);
+        otherBall.dy = otherNewSpeed * Math.sin(angle + Math.PI);
+    }
+};
   
 
 }

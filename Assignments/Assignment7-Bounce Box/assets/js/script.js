@@ -35,6 +35,15 @@ function render() {
 
     ball.checkWallCollision(0, 0, VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
   });
+
+  // Check for ball collisions
+  for (let i = 0; i < ballsArray.length; i++) {
+    for (let j = i + 1; j < ballsArray.length; j++) {
+        ballsArray[i].checkBallCollision(ballsArray[j]);
+    }
+}
+
+
   //maintains framerate and continous animation
   requestAnimationFrame(render);
 }
