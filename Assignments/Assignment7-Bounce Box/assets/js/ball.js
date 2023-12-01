@@ -19,8 +19,10 @@ class Ball {
     this.y = y;
 
     //x-axis and y axis speed
-    this.dx = getRandomNumber(-1, 1);
-    this.dy = getRandomNumber(-1, 1);
+    // this.dx = getRandomNumber(-1, 1);
+    this.dx = (Math.random()-0.5) * 2
+    // this.dy = getRandomNumber(-1, 1);
+    this.dy = (Math.random() - 0.5) * 2;
 
     //radius
     // this.radius = radius;
