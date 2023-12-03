@@ -1,0 +1,10 @@
+body {
+    /* makes the screen come to center */
+    text-align: center;
+}
+
+/* main container */
+#board {
+    /* background-color: green; */
+    background-image: url("../image/doodlejumpbg.png");
+}
