@@ -3,29 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake and Ladder</title>
+    <title>Snake and Ladder Game</title>
     <link rel="stylesheet" href="assets/style/snake.css">
 </head>
 <body>
-
-    <canvas id="diceBoard" width="50" height="50"></canvas>
-    <canvas id="snakeAndLadderBoard" width="600" height="600"></canvas>
-
-    <!-- For manual snake and ladder -->
-    <!-- <form id="snakeAndLadderForm">
-        <label for="startPosition">Start Position:</label>
-        <input type="number" id="startPosition" required>
-        <label for="endPosition">End Position:</label>
-        <input type="number" id="endPosition" required>
-        <label for="snakeOrLadder">Snake or Ladder:</label>
-        <select id="snakeOrLadder" required>
-            <option value="snake">Snake</option>
-            <option value="ladder">Ladder</option>
-        </select>
-        <button type="button" onclick="addSnakeOrLadder()">Add Snake/Ladder</button>
+    <canvas id="gameCanvas" width="600" height="600"></canvas>
+    <!-- <form>
+        <Label>Number of Snakes and Ladder</Label>
+        <input type="number">    
     </form> -->
-
-    <!-- <script src="assets/scripts/snakeAndLadderGenerate.js"></script> -->
+    <script src="assets/scripts/snakeBoard.js"></script>
+    <script src="assets/scripts/snakePlayer.js"></script>
     <script src="assets/scripts/snake.js"></script>
 </body>
 </html>

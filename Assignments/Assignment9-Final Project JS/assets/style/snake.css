@@ -7,14 +7,16 @@ body {
 }
 
 /* main canvas board */
-#snakeAndLadderBoard {
+#gameCanvas {
     border: 2px solid #141313;
 }
 
 /* main dice roll board */
-#diceBoard{
+/* #diceBoard{
     border: 2px solid black;
-}
+    width: 40px;
+    height: 40px;
+} */
 
 /* form{
     display: flex;
