@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* main canvas board */
+#snakeAndLadderBoard {
+    border: 2px solid #141313;
+}
+
+/* main dice roll board */
+#diceBoard{
+    border: 2px solid black;
+}
+
+/* form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+} */
