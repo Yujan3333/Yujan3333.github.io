@@ -57,9 +57,10 @@ img {
   margin-bottom: 10px;
 }
 
-.text-content a {
+.text-content button {
   color: white;
-  text-decoration: none;
+  background: var(--Header-text, #343d33);
+  /* text-decoration: none; */
   display: inline-flex;
   padding: 20px 56px;
   align-items: center;
