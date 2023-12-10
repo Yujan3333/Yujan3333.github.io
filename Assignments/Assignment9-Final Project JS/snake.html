@@ -7,13 +7,29 @@
     <link rel="stylesheet" href="assets/style/snake.css">
 </head>
 <body>
-    <canvas id="gameCanvas" width="600" height="600"></canvas>
-    <!-- <form>
-        <Label>Number of Snakes and Ladder</Label>
-        <input type="number">    
-    </form> -->
-    <script src="assets/scripts/snakeBoard.js"></script>
-    <script src="assets/scripts/snakePlayer.js"></script>
-    <script src="assets/scripts/snake.js"></script>
-</body>
+    <main>
+      <!-- player status -->
+      <div class="player-info">
+        <h1>Info</h1>
+        <div id="player-turn"> <h2>Current Turn:</h2></div>
+        <div id="player1-position"></div>
+        <div id="player2-position"></div>
+        <div id="player-roll"></div>
+        <div id="snake-ladder"></div>
+      </div>
+
+      <!--main game board -->
+      <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+      <!-- Dice Roll Section -->
+      <div id="dice-container" class="side">
+        <h2>Roll The Dice Bro!</h2>
+        <img id="dice" src="./assets/images/dice1.png" alt="dice-default" />
+      </div>
+    </main>
+
+    <script src="assets/scripts/snakeAndLadder/dice.js"></script>
+    <script src="assets/scripts/snakeAndLadder/snakeBoard.js"></script>
+    <script src="assets/scripts/snakeAndLadder/snake.js"></script>
+  </body>
 </html>

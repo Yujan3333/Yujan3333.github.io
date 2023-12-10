@@ -1,25 +1,63 @@
 body {
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-}
-
-/* main canvas board */
-#gameCanvas {
-    border: 2px solid #141313;
-}
-
-/* main dice roll board */
-/* #diceBoard{
-    border: 2px solid black;
-    width: 40px;
-    height: 40px;
-} */
-
-/* form{
+    background-color: #f0f0f0;
+  }
+  
+  main {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 2rem;
-} */
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .player-info {
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  
+  #player-turn h2 {
+    color: #008080;
+  }
+  
+  #player1-position, #player2-position, #player-roll, #snake-ladder {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  #gameCanvas {
+    border: 2px solid #333;
+    margin: 20px 0;
+  }
+  
+  #dice-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #dice {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+  
+  /* Add hover effect to the dice image */
+  #dice:hover {
+    filter: brightness(1.1);
+  }
+  
