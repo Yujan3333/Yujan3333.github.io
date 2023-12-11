@@ -1,63 +1,93 @@
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  }
-  
-  main {
-    display: flex;
-    /* flex-direction: column; */
-    gap: 2rem;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1, h2 {
-    margin: 0;
-    color: #333;
-  }
-  
-  .player-info {
-    margin-bottom: 20px;
-    width: 300px;
-  }
-  
-  #player-turn h2 {
-    color: #008080;
-  }
-  
-  #player1-position, #player2-position, #player-roll, #snake-ladder {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-  }
-  
-  #gameCanvas {
-    border: 2px solid #333;
-    margin: 20px 0;
-  }
-  
-  #dice-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  #dice {
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-  }
-  
-  /* Add hover effect to the dice image */
-  #dice:hover {
-    filter: brightness(1.1);
-  }
-  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* h1, h2 {
+  margin: 0;
+  color: #333;
+} */
+
+.player-info {
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.player-info h1{
+  color: green;
+}
+
+#player-turn h2{
+  color:blueviolet;
+}
+
+.player-color-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#player1-color {
+  width: 20px;
+  height: 20px;
+  background-color: #fff; /* White color for Player 1 */
+  border: 1px solid #000;
+}
+
+#player2-color {
+  width: 20px;
+  height: 20px;
+  background-color: #ff0; /* Yellow color for Player 2 */
+  border: 1px solid #000;
+  /* margin-right: 5px; */
+}
+
+
+#player1-position, #player2-position, #player-roll, #snake-ladder {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #07030300;
+  height: 30px;
+  max-height: 40px;
+  display: flex;
+  align-items: center; 
+}
+
+
+
+#gameCanvas {
+  border: 2px solid #333;
+  margin: 20px 0;
+}
+
+#dice-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#dice {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+/* Add hover effect to the dice image */
+#dice:hover {
+  filter: brightness(1.1);
+}
