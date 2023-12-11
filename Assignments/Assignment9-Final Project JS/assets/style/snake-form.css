@@ -1,0 +1,82 @@
+body {
+    margin: 5;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #f0f0f0;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #input-form {
+    background-color: #fff;
+    display: flex;
+    gap: 2rem;
+    /* margin-top: 8rem; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #input-form h2 {
+    color: #333;
+  }
+  
+  /* Style for input fields and button */
+  input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #008080;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #006666;
+  }
+  
+  /* Styling for snakes and ladders sections */
+  #snakes,
+  #ladders {
+    margin-top: 20px;
+  }
+  
+  #snakes label,
+  #ladders label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  #snakes input,
+  #ladders input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #snakes,
+  #ladders {
+    width: 45%; 
+    float: left;
+  }
+  

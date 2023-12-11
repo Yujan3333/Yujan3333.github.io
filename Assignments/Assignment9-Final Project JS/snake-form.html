@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake and Ladder Game - Form</title>
+  <link rel="stylesheet" href="assets/style/snake-form.css">
+</head>
+
+<body>
+  <main>
+    <!-- Input form for snakes and ladders -->
+    <h2>Enter Snake and Ladder Positions</h2>
+    
+    <div id="input-form">
+        <!-- Snakes -->
+        <div id="snakes">
+        <label for="snake1Start">Snake 1 Start:</label>
+        <input type="number" id="snake1Start" />
+        <label for="snake1End">Snake 1 End:</label>
+        <input type="number" id="snake1End" />
+
+        <label for="snake2Start">Snake 2 Start:</label>
+        <input type="number" id="snake2Start" />
+        <label for="snake2End">Snake 2 End:</label>
+        <input type="number" id="snake2End" />
+
+        <label for="snake3Start">Snake 3 Start:</label>
+        <input type="number" id="snake3Start" />
+        <label for="snake3End">Snake 3 End:</label>
+        <input type="number" id="snake3End" />
+
+        <label for="snake4Start">Snake 4 Start:</label>
+        <input type="number" id="snake4Start" />
+        <label for="snake4End">Snake 4 End:</label>
+        <input type="number" id="snake4End" />
+      </div>
+
+      <!-- Ladders -->
+      <div id="ladders">
+        <label for="ladder1Start">Ladder 1 Start:</label>
+        <input type="number" id="ladder1Start" />
+        <label for="ladder1End">Ladder 1 End:</label>
+        <input type="number" id="ladder1End" />
+
+        <label for="ladder2Start">Ladder 2 Start:</label>
+        <input type="number" id="ladder2Start" />
+        <label for="ladder2End">Ladder 2 End:</label>
+        <input type="number" id="ladder2End" />
+
+        <label for="ladder3Start">Ladder 3 Start:</label>
+        <input type="number" id="ladder3Start" />
+        <label for="ladder3End">Ladder 3 End:</label>
+        <input type="number" id="ladder3End" />
+
+        <!-- Buttons -->
+        <button onclick="updateSnakesAndLadders()">
+            Update Snakes and Ladders
+          </button>
+      </div>
+
+      <!-- <button onclick="updateSnakesAndLadders()">
+        Update Snakes and Ladders
+      </button> -->
+    </div>
+  </main>
+
+  <script src="assets/scripts/snakeAndLadder/snake-form.js"></script>
+</body>
+
+</html>
