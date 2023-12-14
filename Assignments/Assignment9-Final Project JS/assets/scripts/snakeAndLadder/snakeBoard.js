@@ -90,11 +90,11 @@ class Board {
         this.context.fillStyle =
           row % 2 === 0
             ? col % 2 === 0
-              ? "#eee"
-              : "#ddd"
+              ? "#64c8c8" // teal
+              : "#ff847c" // coral
             : col % 2 === 0
-            ? "#ddd"
-            : "#eee";
+            ? "#ff847c" // coral
+            : "#64c8c8"; // teal
 
         // console.log(this.context.fillStyle);
 
@@ -173,14 +173,10 @@ class Board {
     this.context.strokeStyle = snake.color; // Green color
     this.context.lineWidth = 2;
     this.context.stroke();
-
   }
-
-
 
   //make the ladder in the board
   renderLadder(ladder) {
-
     //getCoordinates() returns a object with (x,y)
     const startCell = this.getCoordinates(ladder.start);
     const endCell = this.getCoordinates(ladder.end);
@@ -246,7 +242,6 @@ class Board {
     player1PositionDiv.innerHTML = `<h3>Player 1 Position: ${this.player1.position}</h3>`;
   }
 
-
   //for setting snake start and end
   placeSnake(start, end) {
     // Place a snake on the board from start to end
@@ -255,7 +250,6 @@ class Board {
     snake.initialAmplitude = Math.random() * 30 + 10; // Random initial amplitude between 10 and 40
     this.snakes.push(snake);
   }
-
 
   //for generating random snake color
   getRandomSnakeColor() {
@@ -294,11 +288,9 @@ class Board {
     playerTurnDiv.innerHTML = `<h2>Current Turn: ${this.currentPlayer.name}</h2>`;
   }
 
-
   //move and update the position of the players on the board
   movePlayer(player, diceValue) {
-
-    //show the snakeLadderMsg in the left div 
+    //show the snakeLadderMsg in the left div
     let snakeAndLadderMsg = document.getElementById("snake-ladder");
 
     // Show what is rolled in the left section

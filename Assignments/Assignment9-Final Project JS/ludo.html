@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/style/ludo.css">
+    </head>
+    <title>Ludo</title>
 <body>
-    <h1>ludo</h1>
+    
+    <div class="centered">
+        <canvas id="board-canvas" width="600" height="600">
+        </canvas>
+
+        <div >
+            <canvas id="dice-canvas" width="50" height="50">
+            </canvas>
+        </div>
+        <div>Press space bar to roll a dice</div>
+    </div>
+    
+<script src="assets/scripts/ludo/ludoGame.js" type="module"></script>
 </body>
 </html>

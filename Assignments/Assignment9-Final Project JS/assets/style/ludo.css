@@ -1,0 +1,13 @@
+#board-canvas {
+    border: 2px solid #000000;
+    margin: 4px;
+}
+
+#dice-canvas {
+    border: 2px solid #0000002a;
+    margin: 10px;
+}
+
+.centered {
+    text-align: center;
+}
