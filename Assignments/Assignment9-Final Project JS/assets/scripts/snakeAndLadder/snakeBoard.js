@@ -246,7 +246,8 @@ class Board {
   placeSnake(start, end) {
     // Place a snake on the board from start to end
     const snake = new Snake(start, end);
-    snake.color = this.getRandomSnakeColor();
+    snake.color="green";
+    // snake.color = this.getRandomSnakeColor();
     snake.initialAmplitude = Math.random() * 30 + 10; // Random initial amplitude between 10 and 40
     this.snakes.push(snake);
   }
@@ -311,6 +312,9 @@ class Board {
       snakeAndLadderMsg.innerHTML = snakeOutput;
       console.log(snakeOutput);
 
+      // Play snake sound
+      document.getElementById("snakeSound").play();
+
       newPosition = snake.end;
     }
 
@@ -320,6 +324,9 @@ class Board {
       let ladderOutput = `Congratulations! ${player.name} climbed a ladder to ${ladder.end}`;
       snakeAndLadderMsg.innerHTML = ladderOutput;
       console.log(ladderOutput);
+
+      // Play ladder sound
+      document.getElementById("ladderSound").play();
 
       newPosition = ladder.end;
     }
@@ -355,6 +362,10 @@ class Board {
 
   //Main function that is called onclick
   handlePlayerTurn(rolledNumber) {
+
+    //Play Dice Sound
+    document.getElementById("diceSound").play();
+
     console.log(`Dice rolled: ${rolledNumber}`);
 
     //To show what the player rolled in the browser
@@ -376,11 +387,18 @@ class Board {
           console.log(
             `${this.currentPlayer.name} rolled a 6 and gets another turn!`
           );
+
+          // Play six sound
+          const sixSound = document.getElementById("sixSound");
+          sixSound.play();
+          
           // Do not switch to the next player, allow the current player to roll again
           return;
+        }else{
+          this.switchPlayer();
         }
+        // this.switchPlayer();
 
-        this.switchPlayer();
       } else {
         // Move the current player to the next position
         const newPosition = this.movePlayer(this.currentPlayer, rolledNumber);
@@ -402,6 +420,11 @@ class Board {
             `${this.currentPlayer.name} rolled a 6 and gets another turn!`
           );
           playerRollDiv.innerHTML = `${this.currentPlayer.name} rolled a 6 and gets another turn!`;
+          
+          // Play six sound
+          const sixSound = document.getElementById("sixSound");
+          sixSound.play();
+
           return;
         }
 
@@ -411,6 +434,7 @@ class Board {
     } else {
       // Player is not in the game
       if (rolledNumber === 6) {
+        
         // Player rolled a six to enter the game
         this.currentPlayer.inGame = true;
         console.log(
@@ -418,6 +442,12 @@ class Board {
         );
         //display that player entered the game in the browser
         playerRollDiv.innerHTML = `${this.currentPlayer.name} rolled ${rolledNumber} <br> ${this.currentPlayer.name} entered the game!`;
+
+        // Play six sound
+        const sixSound = document.getElementById("sixSound");
+        sixSound.play();
+
+
       } else {
         // Player did not roll a six, switch to the next player
         console.log(
@@ -436,6 +466,10 @@ class Board {
 
   //alert is not working inside the above code due to multiple renders
   displayWinningMessage(message) {
+    
+    // Play winning sound
+    document.getElementById("winSound").play();
+
     // to display the winning message to the user.
     alert(message);
   }
