@@ -40,6 +40,10 @@ function initGame() {
     const rolledNumber = rollDice();
     console.log(`Dice roll is ${rolledNumber}`);
 
+    let currentPlayer = board.currentPlayer;
+    // Update the current player div
+    document.getElementById("current-player").textContent = `Current Player: ${currentPlayer.name}`;
+
     // // Change the current player
     // currentPlayer = board.getNextPlayer(currentPlayer);
 

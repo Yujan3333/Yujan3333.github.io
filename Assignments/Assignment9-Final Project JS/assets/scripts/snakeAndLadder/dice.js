@@ -12,12 +12,12 @@ function rollDice() {
     //animates the dice
     function animate() {
         if (framesUp > 1) {
-            dice.src = `./assets/images/dice/dice${framesUp}.png`;
+            dice.src = `./assets/images/dice${framesUp}.png`;
             dice.style.transform = `rotate(${rotationAngle}deg)`;
             framesUp--;
             rotationAngle *= 2;
         } else if (framesUp === 1) {
-            dice.src = `./assets/images/dice/dice${diceNum}.png`;
+            dice.src = `./assets/images/dice${diceNum}.png`;
             framesUp--;
         } else {
             clearInterval(animation);
