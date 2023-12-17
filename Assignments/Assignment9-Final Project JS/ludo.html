@@ -6,15 +6,22 @@
     <title>Ludo</title>
 <body>
     
-    <div class="centered">
+    <div class="wrapper">
         <canvas id="board-canvas" width="600" height="600">
         </canvas>
-
-        <div >
+        
+        <!-- <div >
             <canvas id="dice-canvas" width="50" height="50">
             </canvas>
-        </div>
-        <div>Press space bar to roll a dice</div>
+            <div>Click to roll</div>
+        </div> -->
+
+        <!-- Dice Roll Section -->
+      <div id="dice-container" class="side">
+        <h2>Roll The Dice!</h2>
+        <img id="dice" src="./assets/images/dice/dice1.png" alt="dice-default" />
+      </div>
+
     </div>
     
 <script src="assets/scripts/ludo/ludoGame.js" type="module"></script>

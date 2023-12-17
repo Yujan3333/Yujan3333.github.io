@@ -1,27 +1,31 @@
 // Dice.js
 
-class Dice {
-    constructor(canvasId) {
-        this.diceCanvas = document.getElementById(canvasId);
-        this.diceContext = this.diceCanvas.getContext('2d');
-        this.diceContext.fillStyle = '#000000';
+export function rollDice() {
+    /**
+     * returns the random number generated and animates the image of dice
+     */
+    let dice = document.getElementById('dice');
+    let animation = setInterval(animate, 50);
+    let rotationAngle = 45;
+    let framesUp = 6;
+    let diceNum = Math.floor(Math.random() * 6 + 1);
+  
+    //animates the dice
+    function animate() {
+        if (framesUp > 1) {
+            dice.src = `./assets/images/dice/dice${framesUp}.png`;
+            dice.style.transform = `rotate(${rotationAngle}deg)`;
+            framesUp--;
+            rotationAngle *= 2;
+        } else if (framesUp === 1) {
+            dice.src = `./assets/images/dice/dice${diceNum}.png`;
+            framesUp--;
+        } else {
+            clearInterval(animation);
+        }
     }
-
-    roll() {
-        console.log('rollTheDice');
-        var diceInterval = setInterval(() => {
-            var nextNumber = 1 + Math.floor(Math.random() * 6);
-            this.diceContext.clearRect(0, 0, this.diceCanvas.width, this.diceCanvas.height);
-            var image = new Image();
-            image.src = 'assets/images/dice2/dice' + nextNumber + '.png';
-            this.diceContext.drawImage(image, 1, 1, 48, 48);
-        }, 50);
-    
-        setTimeout(() => {
-            clearInterval(diceInterval);
-        }, 1000);
-    }
-}
-
-// Export the Dice class
-export default Dice;
+  
+    return diceNum;
+  }
+  
+  
