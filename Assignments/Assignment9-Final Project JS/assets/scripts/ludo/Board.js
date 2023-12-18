@@ -39,13 +39,14 @@ class Board {
     // //Initialize Yellow Players Piece
     this.player4 = new Player("Player Yellow", "yellow", [64, 65, 66, 67]);
 
-    //tracks the current player
-    this.currentPlayer = this.player2;
+    //tracks the next player
+    this.nextPlayer = this.player1;
+    //Gets the current player
+    this.currentPlayer = this.player1;
     // Property to store the current dice roll
     this.currentDiceRoll = 0; // Default value.
     // Property to track whether a dice roll has occurred
     this.diceRolled = false;
-
   }
 
   //just returns the boardCanvas for onClick check on canvas board for piece movement
@@ -57,6 +58,19 @@ class Board {
   setDiceRoll(roll) {
     this.currentDiceRoll = roll;
     this.diceRolled = true;
+
+    // If 6, don't switch turn
+    if (this.currentDiceRoll === 6) {
+      //for giving the player who rolled a 6 next chance
+      this.currentPlayer=this.nextPlayer;
+      console.log(`${this.currentPlayer.name} -> Rolled a 6`);
+    }else{
+      this.getNextPlayer();
+    }
+
+    //Show in browser whose turn it is
+    this.renderCurrentPlayerDiv();
+    
   }
 
   /**
@@ -771,119 +785,146 @@ class Board {
     };
   }
 
+  //called after a click on the canvas board
   handlePlayerPiece(clickedPiece) {
     // //Shows the current Piece Clicked
     // console.log(`Inside handlePlayerPiece - Clicked on ${clickedPiece.name}`);
 
-    if (this.diceRolled && clickedPiece) {
-      //Only for red piece
-      if (clickedPiece.color === "red") {
-        // console.log(`${clickedPiece.name} start boxIndex: ${clickedPiece.boxIndex}`);
+    if (this.diceRolled) {
+      if (clickedPiece) {
+        //Only for red piece
+        if (clickedPiece.color === "red") {
+          // console.log(`${clickedPiece.name} start boxIndex: ${clickedPiece.boxIndex}`);
 
-        //piece is in Red home circle and not in game
-        if (!clickedPiece.openToPlay) {
-          // If the player is at the start position
-          if (this.currentDiceRoll === 6) {
-            // If the dice roll is 6, move to the first position
-            clickedPiece.pathIndex = 0;
-            console.log(`Rolled a 6, ${clickedPiece.name} entered the game`);
-            clickedPiece.movePiece(redPathIndices[clickedPiece.pathIndex]);
-            //change to piece is in the game
-            clickedPiece.openToPlay = true;
+          //piece is in Red home circle and not in game
+          if (!clickedPiece.openToPlay) {
+            // If the player is at the start position
+            if (this.currentDiceRoll === 6) {
+              // If the dice roll is 6, move to the first position
+              clickedPiece.pathIndex = 0;
+              console.log(`Rolled a 6, ${clickedPiece.name} entered the game`);
+              clickedPiece.movePiece(redPathIndices[clickedPiece.pathIndex]);
+              //change to piece is in the game
+              clickedPiece.openToPlay = true;
+            } else {
+              //not rolled a 6
+              console.log(`${clickedPiece.name} roll a 6 to enter game!`);
+            }
           } else {
-            //not rolled a 6
-            console.log(`${clickedPiece.name} roll a 6 to enter game!`);
+            //Piece is already in the game
+            clickedPiece.pathIndex += this.currentDiceRoll; //add the roll of dice to current position
+            clickedPiece.movePiece(redPathIndices[clickedPiece.pathIndex]); //Update the piece position
           }
-        } else {
-          //Piece is already in the game
-          clickedPiece.pathIndex += this.currentDiceRoll; //add the roll of dice to current position
-          clickedPiece.movePiece(redPathIndices[clickedPiece.pathIndex]); //Update the piece position
-        }
-      } else if (clickedPiece.color === "green") {
-        //piece is in Green home circle and not in game
-        if (!clickedPiece.openToPlay) {
-          // If the player is at the start position
-          if (this.currentDiceRoll === 6) {
-            // If the dice roll is 6, move to the first position
-            clickedPiece.pathIndex = 0;
-            console.log(`Rolled a 6, ${clickedPiece.name} entered the game`);
-            clickedPiece.movePiece(greenPathIndices[clickedPiece.pathIndex]);
-            //change to piece is in the game
-            clickedPiece.openToPlay = true;
+
+          //Green Piece
+        } else if (clickedPiece.color === "green") {
+          //piece is in Green home circle and not in game
+          if (!clickedPiece.openToPlay) {
+            // If the player is at the start position
+            if (this.currentDiceRoll === 6) {
+              // If the dice roll is 6, move to the first position
+              clickedPiece.pathIndex = 0;
+              console.log(`Rolled a 6, ${clickedPiece.name} entered the game`);
+              clickedPiece.movePiece(greenPathIndices[clickedPiece.pathIndex]);
+              //change to piece is in the game
+              clickedPiece.openToPlay = true;
+            } else {
+              //not rolled a 6
+              console.log(`${clickedPiece.name} roll a 6 to enter game!`);
+            }
           } else {
-            //not rolled a 6
-            console.log(`${clickedPiece.name} roll a 6 to enter game!`);
+            //Piece is already in the game
+            clickedPiece.pathIndex += this.currentDiceRoll; //add the roll of dice to current position
+            clickedPiece.movePiece(greenPathIndices[clickedPiece.pathIndex]); //Update the piece position
           }
-        } else {
-          //Piece is already in the game
-          clickedPiece.pathIndex += this.currentDiceRoll; //add the roll of dice to current position
-          clickedPiece.movePiece(greenPathIndices[clickedPiece.pathIndex]); //Update the piece position
+
+          //Blue Piece
+        } else if (clickedPiece.color === "blue") {
+          //piece is in Blue home circle and not in game
+          if (!clickedPiece.openToPlay) {
+            // If the player is at the start position
+            if (this.currentDiceRoll === 6) {
+              // If the dice roll is 6, move to the first position
+              clickedPiece.pathIndex = 0;
+              console.log(`Rolled a 6, ${clickedPiece.name} entered the game`);
+              clickedPiece.movePiece(bluePathIndices[clickedPiece.pathIndex]);
+              //change to piece is in the game
+              clickedPiece.openToPlay = true;
+            } else {
+              //not rolled a 6
+              console.log(`${clickedPiece.name} roll a 6 to enter game!`);
+            }
+          } else {
+            //Piece is already in the game
+            clickedPiece.pathIndex += this.currentDiceRoll; //add the roll of dice to current position
+            clickedPiece.movePiece(bluePathIndices[clickedPiece.pathIndex]); //Update the piece position
+          }
+
+          //Yellow Piece
+        } else if (clickedPiece.color === "yellow") {
+          //piece is in Yellow home circle and not in game
+          if (!clickedPiece.openToPlay) {
+            // If the player is at the start position
+            if (this.currentDiceRoll === 6) {
+              // If the dice roll is 6, move to the first position
+              clickedPiece.pathIndex = 0;
+              console.log(`Rolled a 6, ${clickedPiece.name} entered the game`);
+              clickedPiece.movePiece(yellowPathIndices[clickedPiece.pathIndex]);
+              //change to piece is in the game
+              clickedPiece.openToPlay = true;
+            } else {
+              //not rolled a 6
+              console.log(`${clickedPiece.name} roll a 6 to enter game!`);
+            }
+          } else {
+            //Piece is already in the game
+            clickedPiece.pathIndex += this.currentDiceRoll; //add the roll of dice to current position
+            clickedPiece.movePiece(yellowPathIndices[clickedPiece.pathIndex]); //Update the piece position
+          }
         }
-      }
-    } else if (clickedPiece.color === "blue") {
-      //piece is in Blue home circle and not in game
-      if (!clickedPiece.openToPlay) {
-        // If the player is at the start position
-        if (this.currentDiceRoll === 6) {
-          // If the dice roll is 6, move to the first position
-          clickedPiece.pathIndex = 0;
-          console.log(`Rolled a 6, ${clickedPiece.name} entered the game`);
-          clickedPiece.movePiece(bluePathIndices[clickedPiece.pathIndex]);
-          //change to piece is in the game
-          clickedPiece.openToPlay = true;
-        } else {
-          //not rolled a 6
-          console.log(`${clickedPiece.name} roll a 6 to enter game!`);
-        }
-      } else {
-        //Piece is already in the game
-        clickedPiece.pathIndex += this.currentDiceRoll; //add the roll of dice to current position
-        clickedPiece.movePiece(bluePathIndices[clickedPiece.pathIndex]); //Update the piece position
-      }
-    } else if (clickedPiece.color === "yellow") {
-      //piece is in Yellow home circle and not in game
-      if (!clickedPiece.openToPlay) {
-        // If the player is at the start position
-        if (this.currentDiceRoll === 6) {
-          // If the dice roll is 6, move to the first position
-          clickedPiece.pathIndex = 0;
-          console.log(`Rolled a 6, ${clickedPiece.name} entered the game`);
-          clickedPiece.movePiece(yellowPathIndices[clickedPiece.pathIndex]);
-          //change to piece is in the game
-          clickedPiece.openToPlay = true;
-        } else {
-          //not rolled a 6
-          console.log(`${clickedPiece.name} roll a 6 to enter game!`);
-        }
-      } else {
-        //Piece is already in the game
-        clickedPiece.pathIndex += this.currentDiceRoll; //add the roll of dice to current position
-        clickedPiece.movePiece(yellowPathIndices[clickedPiece.pathIndex]); //Update the piece position
       }
     }
 
     // Reset the flag and dice roll value
     this.diceRolled = false;
-    this.currentDiceRoll = 0;
+    // this.currentDiceRoll = 0;
 
     // // Switch to the next player
     // this.getNextPlayer();
+
+    
+
 
     // Render the updated board
     this.render();
   }
 
-  //Switch between 4 players
+  /**
+   * Current and Next Player tracking
+   */
   getNextPlayer() {
-    if (this.currentPlayer === this.player1) {
-      this.currentPlayer = this.player2;
-    } else if (this.currentPlayer === this.player2) {
-      this.currentPlayer = this.player3;
-    } else if (this.currentPlayer === this.player3) {
-      this.currentPlayer = this.player4;
-    } else {
+    if (this.nextPlayer === this.player1) {
+      this.nextPlayer = this.player2;
       this.currentPlayer = this.player1;
+    } else if (this.nextPlayer === this.player2) {
+      this.nextPlayer = this.player3;
+      this.currentPlayer = this.player2;
+    } else if (this.nextPlayer === this.player3) {
+      this.nextPlayer = this.player4;
+      this.currentPlayer = this.player3;
+    } else if (this.nextPlayer === this.player4) {
+      this.nextPlayer = this.player1;
+      this.currentPlayer = this.player4;
     }
+  }
+
+  /**
+   * Show the current player in the browsers
+   */
+  renderCurrentPlayerDiv() {
+    document.getElementById(
+      "current-player"
+    ).textContent = ` Current Roll Turn: ${this.currentPlayer.name}`;
   }
 }
 

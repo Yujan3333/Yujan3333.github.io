@@ -57,10 +57,10 @@ class Board {
     this.player1 = new Player("Player 1", "#FFF", 0); //white color
     this.player2 = new Player("Player 2", "#FF0", 0); //yellow color
     this.currentPlayer = this.player1; // Start with player 1
-    // Load snake images
+    // Load snake and ladder images
     this.snakeImage = new Image();
     this.snakeImage.src = "assets/images/s4.png";
-    //load ladder images
+
     this.ladderImage = new Image();
     this.ladderImage.src = "assets/images/l1.png";
     this.initializeBoard(); //create the board grid and its cell number
@@ -96,11 +96,11 @@ class Board {
         this.context.fillStyle =
           row % 2 === 0
             ? col % 2 === 0
-              ? "#64c8c8" // teal
-              : "#ff847c" // coral
+              ? "#ccc" // black
+              : "#fff" // white
             : col % 2 === 0
-            ? "#ff847c" // coral
-            : "#64c8c8"; // teal
+            ? "#fff" // white
+            : "#ccc"; // black
 
         // console.log(this.context.fillStyle);
 
@@ -285,11 +285,11 @@ class Board {
   }
 
   //for generating random snake color
-  getRandomSnakeColor() {
-    const colors = ["red", "green", "purple", "orange"];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
-  }
+  // getRandomSnakeColor() {
+  //   const colors = ["red", "green", "purple", "orange"];
+  //   const randomIndex = Math.floor(Math.random() * colors.length);
+  //   return colors[randomIndex];
+  // }
 
   //add new ladder to the ladder array with its start and end cell
   placeLadder(start, end) {

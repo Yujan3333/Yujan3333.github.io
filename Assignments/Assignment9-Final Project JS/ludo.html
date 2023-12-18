@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="assets/style/ludo.css">
-    </head>
-    <title>Ludo</title>
-<body>
-    
+  <head>
+    <link rel="stylesheet" href="assets/style/ludo.css" />
+  </head>
+  <title>Ludo</title>
+  <body>
     <div class="wrapper">
-        <canvas id="board-canvas" width="600" height="600">
-        </canvas>
-        
-        <!-- <div >
+      <div id="info">
+        <div id="dice-roll"></div>
+      </div>
+      <canvas id="board-canvas" width="600" height="600"> </canvas>
+
+      <!-- <div >
             <canvas id="dice-canvas" width="50" height="50">
             </canvas>
             <div>Click to roll</div>
         </div> -->
 
-        <!-- Dice Roll Section -->
+      <!-- Dice Roll Section -->
       <div id="dice-container" class="side">
         <h2>Roll The Dice!</h2>
-        <img id="dice" src="./assets/images/dice/dice1.png" alt="dice-default" />
+        <img
+          id="dice"
+          src="./assets/images/dice/dice1.png"
+          alt="dice-default"
+        />
         <div id="current-player"></div>
       </div>
-
     </div>
-    
-<script src="assets/scripts/ludo/Game.js" type="module"></script>
-</body>
+
+    <script src="assets/scripts/ludo/Game.js" type="module"></script>
+  </body>
 </html>

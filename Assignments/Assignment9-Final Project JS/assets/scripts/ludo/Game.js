@@ -1,8 +1,9 @@
+// Game.js
 
 import Board from "./Board.js";
 import Player from "./Player.js";
 import Piece from "./Piece.js";
-import { rollDice } from './Dice.js';
+import { rollDice } from "./Dice.js";
 
 document.onload = initGame();
 
@@ -13,6 +14,7 @@ function initGame() {
   //gets the piece that is clicked
   board.getCanvas().addEventListener("click", function (event) {
     let currentPlayer = board.currentPlayer;
+    console.log(`Current Player is ${currentPlayer.name}`);
     const mouseX = event.offsetX;
     const mouseY = event.offsetY;
 
@@ -27,12 +29,8 @@ function initGame() {
     if (clickedPiece) {
       // Move the piece based on the dice roll
       board.handlePlayerPiece(clickedPiece);
-
-      // // Change the current player
-      // currentPlayer = board.getNextPlayer(currentPlayer);
     }
   });
-
 
   // Event listener for the dice roll
   document.getElementById("dice").addEventListener("click", function () {
@@ -40,12 +38,9 @@ function initGame() {
     const rolledNumber = rollDice();
     console.log(`Dice roll is ${rolledNumber}`);
 
-    let currentPlayer = board.currentPlayer;
-    // Update the current player div
-    document.getElementById("current-player").textContent = `Current Player: ${currentPlayer.name}`;
-
-    // // Change the current player
-    // currentPlayer = board.getNextPlayer(currentPlayer);
+    document.getElementById(
+      "dice-roll"
+    ).innerHTML = `Dice Rolled: ${rolledNumber}`;
 
     // Store the random dice roll in the board
     board.setDiceRoll(rolledNumber);
