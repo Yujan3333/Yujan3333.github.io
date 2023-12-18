@@ -57,6 +57,12 @@ class Board {
     this.player1 = new Player("Player 1", "#FFF", 0); //white color
     this.player2 = new Player("Player 2", "#FF0", 0); //yellow color
     this.currentPlayer = this.player1; // Start with player 1
+    // Load snake images
+    this.snakeImage = new Image();
+    this.snakeImage.src = "assets/images/s4.png";
+    //load ladder images
+    this.ladderImage = new Image();
+    this.ladderImage.src = "assets/images/l1.png";
     this.initializeBoard(); //create the board grid and its cell number
   }
 
@@ -173,6 +179,19 @@ class Board {
     this.context.strokeStyle = snake.color; // Green color
     this.context.lineWidth = 2;
     this.context.stroke();
+
+    // Draw the snake head image
+    const snakeHeadImageSize = 40;
+    const headX = startCell.x + 0.5 * this.cellSize - 0.5 * snakeHeadImageSize;
+    const headY = startCell.y + 0.5 * this.cellSize - 0.5 * snakeHeadImageSize;
+
+    this.context.drawImage(
+      this.snakeImage,
+      headX,
+      headY,
+      snakeHeadImageSize,
+      snakeHeadImageSize
+    );
   }
 
   //make the ladder in the board
@@ -210,6 +229,19 @@ class Board {
 
     this.context.strokeStyle = "#000"; // Reset stroke color
     this.context.lineWidth = 1; // Reset line width
+
+    // Draw the ladder image
+    const ladderImageSize = 40;
+    const headX = startCell.x + 0.5 * this.cellSize - 0.5 * ladderImageSize;
+    const headY = startCell.y + 0.5 * this.cellSize - 0.5 * ladderImageSize;
+
+    this.context.drawImage(
+      this.ladderImage,
+      headX,
+      headY,
+      ladderImageSize,
+      ladderImageSize
+    );
   }
 
   //render the player on the board
@@ -246,7 +278,7 @@ class Board {
   placeSnake(start, end) {
     // Place a snake on the board from start to end
     const snake = new Snake(start, end);
-    snake.color="green";
+    snake.color = "green";
     // snake.color = this.getRandomSnakeColor();
     snake.initialAmplitude = Math.random() * 30 + 10; // Random initial amplitude between 10 and 40
     this.snakes.push(snake);
@@ -362,7 +394,6 @@ class Board {
 
   //Main function that is called onclick
   handlePlayerTurn(rolledNumber) {
-
     //Play Dice Sound
     document.getElementById("diceSound").play();
 
@@ -391,14 +422,13 @@ class Board {
           // Play six sound
           const sixSound = document.getElementById("sixSound");
           sixSound.play();
-          
+
           // Do not switch to the next player, allow the current player to roll again
           return;
-        }else{
+        } else {
           this.switchPlayer();
         }
         // this.switchPlayer();
-
       } else {
         // Move the current player to the next position
         const newPosition = this.movePlayer(this.currentPlayer, rolledNumber);
@@ -420,7 +450,7 @@ class Board {
             `${this.currentPlayer.name} rolled a 6 and gets another turn!`
           );
           playerRollDiv.innerHTML = `${this.currentPlayer.name} rolled a 6 and gets another turn!`;
-          
+
           // Play six sound
           const sixSound = document.getElementById("sixSound");
           sixSound.play();
@@ -434,7 +464,6 @@ class Board {
     } else {
       // Player is not in the game
       if (rolledNumber === 6) {
-        
         // Player rolled a six to enter the game
         this.currentPlayer.inGame = true;
         console.log(
@@ -446,8 +475,6 @@ class Board {
         // Play six sound
         const sixSound = document.getElementById("sixSound");
         sixSound.play();
-
-
       } else {
         // Player did not roll a six, switch to the next player
         console.log(
@@ -466,7 +493,6 @@ class Board {
 
   //alert is not working inside the above code due to multiple renders
   displayWinningMessage(message) {
-    
     // Play winning sound
     document.getElementById("winSound").play();
 
