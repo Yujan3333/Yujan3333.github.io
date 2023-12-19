@@ -56,6 +56,8 @@ class Board {
 
   //To set the dice roll in the Board.js
   setDiceRoll(roll) {
+    //dice sound
+    document.getElementById("diceSound").play();
     this.currentDiceRoll = roll;
     this.diceRolled = true;
 
