@@ -18,3 +18,11 @@
     justify-content: center;
     align-items: center;
 }
+
+#info{
+    width: 100px;
+}
+
+#dice-container{
+    width: 300px;
+}
