@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-TypeScript</title>
+
+    <!-- Adding Boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-4">Todo List</h1>
+
+      <!-- Input for searching tasks -->
+      <div class="mt-3">
+        <input
+          type="text"
+          class="form-control"
+          id="searchKeyword"
+          placeholder="Search tasks"
+        />
+        <!-- <button class="btn btn-secondary mt-2" onclick="searchTasks()">
+          Search
+        </button> -->
+      </div>
+
+      <!-- Form to add tasks -->
+      <form id="addTaskForm" class="mt-4">
+        <div class="form-row d-flex gap-2">
+          <div class="col-11">
+            <input
+              type="text"
+              class="form-control"
+              id="taskDescription"
+              placeholder="Enter task "
+              required
+            />
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-primary btn-block">
+              Add Task
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Buttons to view tasks -->
+      <div class="mt-4 ">
+        <button class="btn btn-info" id="allTasks" onclick="allTasks()">All Tasks</button>
+        <button class="btn btn-success" id="completedTasks" onclick="completedTasks()">
+          Completed
+        </button>
+        <button class="btn btn-warning" id="remainingTasks" onclick="remainingTasks()">
+          Remaining
+        </button>
+      </div>
+
+      <!-- Task list -->
+      <ul id="list-item" class="list-group task-list mt-4"></ul>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

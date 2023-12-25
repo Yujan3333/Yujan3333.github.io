@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Remove default styles on anchor links */
+a {
+  text-decoration: none;
+}
+
+/* body {
+  padding: 20px;
+}
+
+.task-list {
+  margin-top: 20px;
+} */
+
+
+/* Added CSS */
+body {
+  background-color: #e5e6e7;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 50px;
+  /* height: 90vh; */
+}
+
+h1 {
+  color: #007bff;
+  text-align: center;
+}
+
+#searchKeyword,
+#taskDescription {
+  border-radius: 4px;
+}
+
+#addTaskForm {
+  margin-top: 20px;
+}
+
+#list-item {
+  list-style-type: none;
+  padding: 0;
+}
+
+.btn-info,
+.btn-success,
+.btn-warning {
+  margin-right: 10px;
+}
