@@ -1,6 +1,6 @@
 import * as userModel from "../model/users";
 
-import { SignupInfo, LoginInfo } from "../interfaces/userInterface";
+import { SignupInfo, LoginInfo } from "../interfaces/userInteface";
 
 
 export const signup = async (email:string, username:string, password:string) => {

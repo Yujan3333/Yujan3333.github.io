@@ -1,13 +1,20 @@
-import { Router} from "express";
-import todoRoutes from "./todoRoutes";
-// import usersRoutes from "./usersRoutes";
+import {Router} from "express";
+import {authenticateToken, refreshActionToken} from "../middleware/authToken";
+import todoRoutes from "./todo";
+import usersRoutes from "./users";
 
-// Creating a main router instance
+
 const router = Router();
 
-// Mounting sub-routers for specific paths
-router.use('/todo', todoRoutes);
-// router.use('/users', usersRoutes);
 
-// Exporting the main router
-export default router;
+// to do CRUD operations on todo list, you need to login first, authenticateToken is the middleware that verifies login access
+router.use("/todo", authenticateToken, todoRoutes);
+  
+// for user login and signup 
+router.use("/users",usersRoutes);
+
+// this endpoint refreshes access token 
+router.post("/token", refreshActionToken);
+
+
+export default router; 

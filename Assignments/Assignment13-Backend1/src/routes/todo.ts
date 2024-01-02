@@ -4,22 +4,22 @@ import {
     createTodo,
     deleteTodoById,
     getTodoById,
+    // getTodo,
     updateTodo,
-} from "../controller/todoController";
+} from "../controller/todo";
 
 const router = Router();
 
 
-// Define a route for retrieving a TODO item by ID (GET method)
+// router.get("/", authenticateToken, getTodo);
+
 router.get("/:id", getTodoById);
 
-// Define a route for deleting a TODO item by ID (DELETE method)
 router.delete("/:id", deleteTodoById);
 
-// Define a route for creating a new TODO item (POST method)
+// // can also use /todo as an endpoint with the POST and PUT HTTP methods; however, using specific endpoints might be more appropriate
 router.post("/create", createTodo);
 
-// Define a route for updating a TODO item by ID (PUT method)
 router.put("/update/:id", updateTodo);
 
 

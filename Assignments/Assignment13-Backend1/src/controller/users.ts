@@ -1,6 +1,6 @@
 import {Request, Response} from "express";
 
-import * as userService from "../service/usersService";
+import * as userService from "../service/users";
 
 export const signup = async (req:Request, res:Response) => {
     const {email,username,password} = req.body;
@@ -13,3 +13,4 @@ export const login = async (req:Request, res:Response) => {
     const data = await userService.login(email, password);
     res.json(data);
 };
+

@@ -1,111 +1,103 @@
 import { promises as fs } from "fs";
 
 
-//get query
+// using async-await because readFile is asynchronous operation when read from another file
+// export async function getTodo() {
+//   try {
+//     const jsonString = await fs.readFile("todo.json", "utf-8");
+//     const data = JSON.parse(jsonString);
+//     return data;
+//   } catch (err) {
+//     return err;
+//   }
+// }
+
 export async function getTodoById(id: number) {
-    try {
-        // Read the content of the "todo.json" file
-        const jsonString = await fs.readFile("todoSimulateDB.json", "utf-8");
-        const data = JSON.parse(jsonString);
+  try {
+    const jsonString = await fs.readFile("todo.json", "utf-8");
+    const data = JSON.parse(jsonString);
 
-        // Filter the data array to find all elements with the matching user ID
-        const todoItems = data.filter((element: { userId: number }) => element.userId === id); //the parameter element is expected to be an object with a userId property of type number.
-
-        // Return the matching TODO items or a message if not found
-        return todoItems.length > 0 ? todoItems : "Tasks not found for this id";
-    } catch (err) {
-        // Return any encountered error
-        return err;
-    }
+    // Filter data array to find all elements with the matching id
+    const todoItems = data.filter((element: { userId: number }) => element.userId === id);
+    return todoItems.length > 0 ? todoItems : "Tasks not found for this id";
+  } catch (err) {
+    return err;
+  }
 }
 
-  
-//create todo query
-export async function createTodo(task: string) {
-    try {
-        // Read the existing content of the "todo.json" file
-        const jsonString = await fs.readFile("todoSimulateDB.json", "utf-8");
-        let existingData = JSON.parse(jsonString);
 
-        // Find the maximum task ID in existing data
-        const maxId = Math.max(...existingData.map((task: { taskId: number }) => task.taskId), 0);  //This effectively converts the array of taskId values into separate arguments for the Math.max function. Math.max is used to find the maximum value among the taskId values, 0 is added to ensure that if the array is empty (i.e., there are no tasks in existingData), the result defaults to 0.
+export async function createTodo(task: string,userId:number) {
+  try {
+    // Read the existing file first
+    const jsonString = await fs.readFile("todo.json", "utf-8");
+    let existingData = JSON.parse(jsonString); // Parse the existing JSON data
 
-        // Add the new task data with an incremented task ID
-        const taskData = { taskId: maxId + 1, task: task };
-        existingData.push(taskData);
+    // map returns new Array containing only ids of each task, then max function finds the maximum value, if the array is empty then default will be 0 
+    const maxId = Math.max(...existingData.map((task: { taskId: number }) => task.taskId), 0);
 
-        // Convert the updated data back to JSON format
-        const updatedJson = JSON.stringify(existingData, null, 2);
+    // Add the new taskData
+    const taskData = { userId: userId, taskId: maxId+1, task: task }; 
+    existingData.push(taskData);
 
-        // Write the updated JSON data back to the file
-        await fs.writeFile("todo.json", updatedJson, "utf8");
+    // Convert the updated data back to JSON format
+    const updatedJson = JSON.stringify(existingData, null, 2); // null and 2 for formatting
 
-        // Return a success message
-        return "Task has been added";
-    } catch (error) {
-        // Return any encountered error
-        return error;
-    }
+    // Write the updated JSON data back to the file
+    fs.writeFile("todo.json", updatedJson, "utf8");
+    return "Task has been added";
+  } catch (error) {
+    return error;
+  }
 }
 
-  
-export async function updateTodo( taskId: number, task: string) {
+export async function updateTodo(userId:number, taskId:number, task:string) {
     try {
-        // Read the existing content of the "todo.json" file
-        const jsonString = await fs.readFile('todoSimulateDB.json', 'utf-8');
-        let existingData = JSON.parse(jsonString);
-
-        // Find the index of the task to update
-        const taskToUpdateIndex = existingData.findIndex((element: { taskId: number }) => ( element.taskId === taskId));
-
+        // Read the existing file first 
+        const jsonString = await fs.readFile('todo.json', 'utf-8');
+        let existingData = JSON.parse(jsonString); // Parse the existing JSON data
+        
+        // finds the index to update -> same as delete condition -> if condition is true, get the index and update
+        const taskToUpdateIndex = existingData.findIndex((element: { userId: number; taskId: number }) => (element.userId === userId && element.taskId === taskId));
+        // console.log(taskToUpdateIndex);
         if (taskToUpdateIndex !== -1) {
             // Update the task in the array by its index
             existingData[taskToUpdateIndex].task = task;
-
-            // Convert the updated data back to JSON format
-            const updatedJson = JSON.stringify(existingData, null, 2);
-
+            
+            // Convert the updated data (existingData) back to JSON format
+            const updatedJson = JSON.stringify(existingData, null, 2); // null and 2 for formatting
+            
             // Write the updated JSON data back to the file
             await fs.writeFile('todo.json', updatedJson, 'utf-8');
-
-            // Return a success message
+            
             return 'Task has been updated';
         } else {
-            // Return a message if the task is not found
             return 'Either that task belongs to someone else or Task not found';
         }
     } catch (error) {
-        // Return any encountered error
         return error;
     }
 }
 
-  
-export async function deleteTodoById(id: number) {
-    try {
-        // Read the existing content of the "todo.json" file
-        const jsonString = await fs.readFile('todoSimulateDB.json', 'utf-8');
-        let existingData = JSON.parse(jsonString);
+export async function deleteTodoById(id: number, userId: number) {
+  try {
+    // Read the existing file first
+    const jsonString = await fs.readFile('todo.json', 'utf-8');
+    let existingData = JSON.parse(jsonString); // Parse the existing JSON data
 
-        // Filter out the task with matching IDs
-        const updatedData = existingData.filter(
-            (element: { taskId: number }) => !( element.taskId === id)
-        );
+    // filters for the existence of userId and taskId match, if there's a match -> condition becomes false -> filters out that element
+    const updatedData = existingData.filter(
+      (element: { userId: number; taskId: number }) => !(element.userId === userId && element.taskId === id)
+    );
 
-        if (updatedData.length < existingData.length) {
-            // Write the updated JSON data back to the file
-            await fs.writeFile('todo.json', JSON.stringify(updatedData, null, 2), 'utf-8');
-
-            // Return a success message
-            return 'Task deleted successfully';
-        } else {
-            // Return a message if the task is not found
-            return "This task doesn't exist or doesn't belong to the user";
-        }
-    } catch (error) {
-        // Return any encountered error
-        return error;
+    if (updatedData.length < existingData.length) {
+      await fs.writeFile('todo.json', JSON.stringify(updatedData, null, 2), 'utf-8');
+      return 'Task deleted successfully';
+    } else {
+      return "This task doesn't exist or doesn't belong to the user";
     }
+  } catch (error) {
+    return error;
+  }
 }
 
-  
+

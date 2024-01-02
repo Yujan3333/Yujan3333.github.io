@@ -1,16 +1,14 @@
-import {Router} from "express";
+import express, {Router} from "express";
 
 import {
     login,
     signup
-} from "../controller/usersController";
+} from "../controller/users";
 
 const router = Router();
 
-//Creating a route for user login
 router.post("/login", login);
 
-//Creating a route for user signup
 router.post("/signup", signup);
 
 

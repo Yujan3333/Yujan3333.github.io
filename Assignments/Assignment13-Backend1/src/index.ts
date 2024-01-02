@@ -1,17 +1,13 @@
 import express from "express";
 import config from "./config";
-import routes from './routes'; // Module defining routes
+import routes from "./routes";
 
-// Creating an instance of the Express application
 const app = express();
 
-// Configuring middleware for parsing JSON requests & Configures Express to parse incoming requests with JSON payloads. This middleware parses the request body and makes the data available in req.body.
-// app.use(express.json());
-
-// Configuring middleware to use defined routes
+// define middleware before routing
+app.use(express.json());
 app.use(routes);
 
-// Starting the Express server and listening on the specified port
-app.listen(config.serverPort, () => {
-    console.log(`Server is listening on port: ${config.serverPort}`);
-});
+console.log(`Server listening on port: ${config.serverPort}`);
+
+app.listen(config.serverPort);
