@@ -9,17 +9,17 @@ export async function seed(knex: Knex): Promise<void> {
         {
             id: 1,
             user_Id: 1,
-            task: "Create TODO CRUD back-end"
+            task: "Backend 1"
           },
           {
             id: 2,
             user_Id: 1,
-            task: "Create DOTO CRUD back-end"
+            task: "Backend 2"
           },
           {
             id: 3,
             user_Id: 2,
-            task: "DB Test"
+            task: "Backend 3"
           },
     ]);
 };
